@@ -6,7 +6,7 @@ public class PauseMenu : MonoBehaviour
 {
     public GameObject pauseMenu;
 
-    public static bool isPaused;
+    public bool isPaused;
     void Start()
     {
         pauseMenu.SetActive(false);
@@ -15,17 +15,26 @@ public class PauseMenu : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if(Input.GetKeyDown(KeyCode.Escape))
+        CheckForPauseInput();
+    }
+
+    void CheckForPauseInput()
+    {
+        if (Input.GetKeyDown(KeyCode.Escape))
         {
-            Debug.Log("Escape Key Pressed");
-            if (isPaused) 
-            {
-                ResumeGame();
-            }
-            else
-            {
-                PauseGame();
-            }
+            TogglePauseState();
+        }
+    }
+
+    public void TogglePauseState()
+    {
+        if (isPaused)
+        {
+            ResumeGame();
+        }
+        else
+        {
+            PauseGame();
         }
     }
 
