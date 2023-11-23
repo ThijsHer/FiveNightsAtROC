@@ -15,6 +15,6 @@ public class Changescene : MonoBehaviour
     IEnumerator changesceneLoad()
     {
         yield return new WaitForSeconds(4f);
-        SceneManager.LoadScene("Office");
+        SceneManager.LoadScene("Night1");
     }
 }
