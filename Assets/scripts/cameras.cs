@@ -17,6 +17,8 @@ public class Cameras : MonoBehaviour
     public GameObject CamUpObject;
     public GameObject CamDownObject;
 
+
+
     // Start is called before the first frame update
     void Start()
     {
@@ -70,6 +72,100 @@ public class Cameras : MonoBehaviour
 
         CamUpObject.SetActive(true);
         CamDownObject.SetActive(false);
+    }
+
+    public void Camera1()
+    {
+        Cam1.gameObject.SetActive(true);
+        Cam2.gameObject.SetActive(false);
+        Cam3.gameObject.SetActive(false);
+        Cam4.gameObject.SetActive(false);
+        Cam5.gameObject.SetActive(false);
+        Cam6.gameObject.SetActive(false);
+        Cam7.gameObject.SetActive(false);
+        Cam8.gameObject.SetActive(false);
+    }
+    public void Camera2()
+    {
+        Cam1.gameObject.SetActive(false);
+        Cam2.gameObject.SetActive(true);
+        Cam3.gameObject.SetActive(false);
+        Cam4.gameObject.SetActive(false);
+        Cam5.gameObject.SetActive(false);
+        Cam6.gameObject.SetActive(false);
+        Cam7.gameObject.SetActive(false);
+        Cam8.gameObject.SetActive(false);
+    }
+
+    public void Camera3()
+    {
+        Cam1.gameObject.SetActive(false);
+        Cam2.gameObject.SetActive(false);
+        Cam3.gameObject.SetActive(true);
+        Cam4.gameObject.SetActive(false);
+        Cam5.gameObject.SetActive(false);
+        Cam6.gameObject.SetActive(false);
+        Cam7.gameObject.SetActive(false);
+        Cam8.gameObject.SetActive(false);
+    }
+    public void Camera4()
+    {
+        Cam1.gameObject.SetActive(false);
+        Cam2.gameObject.SetActive(false);
+        Cam3.gameObject.SetActive(false);
+        Cam4.gameObject.SetActive(true);
+        Cam5.gameObject.SetActive(false);
+        Cam6.gameObject.SetActive(false);
+        Cam7.gameObject.SetActive(false);
+        Cam8.gameObject.SetActive(false);
+    }
+
+    public void Camera5()
+    {
+        Cam1.gameObject.SetActive(false);
+        Cam2.gameObject.SetActive(false);
+        Cam3.gameObject.SetActive(false);
+        Cam4.gameObject.SetActive(false);
+        Cam5.gameObject.SetActive(true);
+        Cam6.gameObject.SetActive(false);
+        Cam7.gameObject.SetActive(false);
+        Cam8.gameObject.SetActive(false);
+    }
+
+    public void Camera6()
+    {
+        Cam1.gameObject.SetActive(false);
+        Cam2.gameObject.SetActive(false);
+        Cam3.gameObject.SetActive(false);
+        Cam4.gameObject.SetActive(false);
+        Cam5.gameObject.SetActive(false);
+        Cam6.gameObject.SetActive(true);
+        Cam7.gameObject.SetActive(false);
+        Cam8.gameObject.SetActive(false);
+    }
+
+    public void Camera7()
+    {
+        Cam1.gameObject.SetActive(false);
+        Cam2.gameObject.SetActive(false);
+        Cam3.gameObject.SetActive(false);
+        Cam4.gameObject.SetActive(false);
+        Cam5.gameObject.SetActive(false);
+        Cam6.gameObject.SetActive(false);
+        Cam7.gameObject.SetActive(true);
+        Cam8.gameObject.SetActive(false);
+    }
+
+    public void Camera8()
+    {
+        Cam1.gameObject.SetActive(false);
+        Cam2.gameObject.SetActive(false);
+        Cam3.gameObject.SetActive(false);
+        Cam4.gameObject.SetActive(false);
+        Cam5.gameObject.SetActive(false);
+        Cam6.gameObject.SetActive(false);
+        Cam7.gameObject.SetActive(false);
+        Cam8.gameObject.SetActive(true);
     }
 }
 
