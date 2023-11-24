@@ -5,16 +5,22 @@ using UnityEngine.SceneManagement;
 
 public class Changescene : MonoBehaviour
 {
+    public float timer = 0;
     // Start is called before the first frame update
     void Start()
     {
-        StartCoroutine(changesceneLoad());
+       StartCoroutine(changesceneLoad());
     }
+
+
 
     // Update is called once per frame
     IEnumerator changesceneLoad()
     {
         yield return new WaitForSeconds(4f);
         SceneManager.LoadScene("Night1");
+
     }
+
+
 }
