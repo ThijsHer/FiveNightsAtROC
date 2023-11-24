@@ -132,7 +132,6 @@ public class Cameras : MonoBehaviour
     public void SwitchToCamUp()
     {
         Office.gameObject.SetActive(false);
-        Debug.Log(camOpener);
         SelectCam();
 
 
