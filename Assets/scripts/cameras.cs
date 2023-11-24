@@ -16,12 +16,14 @@ public class Cameras : MonoBehaviour
 
     public GameObject CamUpObject;
     public GameObject CamDownObject;
+    AudioSource camswitcher;
 
 
 
     // Start is called before the first frame update
     void Start()
     {
+        camswitcher = GetComponent<AudioSource>();
         Office.gameObject.SetActive(true);
         Cam1.gameObject.SetActive(false);
         Cam2.gameObject.SetActive(false);
@@ -76,6 +78,7 @@ public class Cameras : MonoBehaviour
 
     public void Camera1()
     {
+        camswitcher.Play();
         Cam1.gameObject.SetActive(true);
         Cam2.gameObject.SetActive(false);
         Cam3.gameObject.SetActive(false);
@@ -84,6 +87,7 @@ public class Cameras : MonoBehaviour
         Cam6.gameObject.SetActive(false);
         Cam7.gameObject.SetActive(false);
         Cam8.gameObject.SetActive(false);
+        
     }
     public void Camera2()
     {
@@ -95,6 +99,7 @@ public class Cameras : MonoBehaviour
         Cam6.gameObject.SetActive(false);
         Cam7.gameObject.SetActive(false);
         Cam8.gameObject.SetActive(false);
+        camswitcher.Play();
     }
 
     public void Camera3()
@@ -107,6 +112,7 @@ public class Cameras : MonoBehaviour
         Cam6.gameObject.SetActive(false);
         Cam7.gameObject.SetActive(false);
         Cam8.gameObject.SetActive(false);
+        camswitcher.Play();
     }
     public void Camera4()
     {
@@ -118,6 +124,7 @@ public class Cameras : MonoBehaviour
         Cam6.gameObject.SetActive(false);
         Cam7.gameObject.SetActive(false);
         Cam8.gameObject.SetActive(false);
+        camswitcher.Play();
     }
 
     public void Camera5()
@@ -130,6 +137,7 @@ public class Cameras : MonoBehaviour
         Cam6.gameObject.SetActive(false);
         Cam7.gameObject.SetActive(false);
         Cam8.gameObject.SetActive(false);
+        camswitcher.Play();
     }
 
     public void Camera6()
@@ -142,6 +150,7 @@ public class Cameras : MonoBehaviour
         Cam6.gameObject.SetActive(true);
         Cam7.gameObject.SetActive(false);
         Cam8.gameObject.SetActive(false);
+        camswitcher.Play();
     }
 
     public void Camera7()
@@ -154,6 +163,7 @@ public class Cameras : MonoBehaviour
         Cam6.gameObject.SetActive(false);
         Cam7.gameObject.SetActive(true);
         Cam8.gameObject.SetActive(false);
+        camswitcher.Play();
     }
 
     public void Camera8()
@@ -166,6 +176,7 @@ public class Cameras : MonoBehaviour
         Cam6.gameObject.SetActive(false);
         Cam7.gameObject.SetActive(false);
         Cam8.gameObject.SetActive(true);
+        camswitcher.Play();
     }
 }
 
