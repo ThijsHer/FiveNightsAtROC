@@ -127,9 +127,9 @@ TextureImporter:
       rect:
         serializedVersion: 2
         x: 0
-        y: 640
-        width: 512
-        height: 640
+        y: 358
+        width: 640
+        height: 358
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -147,10 +147,10 @@ TextureImporter:
       name: phoneguyjumpscare_1
       rect:
         serializedVersion: 2
-        x: 512
-        y: 640
-        width: 512
-        height: 640
+        x: 640
+        y: 358
+        width: 640
+        height: 358
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -168,10 +168,10 @@ TextureImporter:
       name: phoneguyjumpscare_2
       rect:
         serializedVersion: 2
-        x: 1024
-        y: 640
-        width: 512
-        height: 640
+        x: 1280
+        y: 358
+        width: 640
+        height: 358
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -189,10 +189,10 @@ TextureImporter:
       name: phoneguyjumpscare_3
       rect:
         serializedVersion: 2
-        x: 1536
-        y: 640
-        width: 512
-        height: 640
+        x: 1920
+        y: 358
+        width: 640
+        height: 358
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -210,10 +210,10 @@ TextureImporter:
       name: phoneguyjumpscare_4
       rect:
         serializedVersion: 2
-        x: 2048
-        y: 640
-        width: 512
-        height: 640
+        x: 2560
+        y: 358
+        width: 640
+        height: 358
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -231,10 +231,10 @@ TextureImporter:
       name: phoneguyjumpscare_5
       rect:
         serializedVersion: 2
-        x: 2560
-        y: 640
-        width: 512
-        height: 640
+        x: 3200
+        y: 358
+        width: 640
+        height: 358
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -252,10 +252,10 @@ TextureImporter:
       name: phoneguyjumpscare_6
       rect:
         serializedVersion: 2
-        x: 3072
-        y: 640
-        width: 512
-        height: 640
+        x: 3840
+        y: 358
+        width: 640
+        height: 358
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -275,8 +275,8 @@ TextureImporter:
         serializedVersion: 2
         x: 0
         y: 0
-        width: 512
-        height: 640
+        width: 640
+        height: 358
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -294,10 +294,10 @@ TextureImporter:
       name: phoneguyjumpscare_8
       rect:
         serializedVersion: 2
-        x: 512
+        x: 640
         y: 0
-        width: 512
-        height: 640
+        width: 640
+        height: 358
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -315,10 +315,10 @@ TextureImporter:
       name: phoneguyjumpscare_9
       rect:
         serializedVersion: 2
-        x: 1024
+        x: 1280
         y: 0
-        width: 512
-        height: 640
+        width: 640
+        height: 358
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -336,10 +336,10 @@ TextureImporter:
       name: phoneguyjumpscare_10
       rect:
         serializedVersion: 2
-        x: 1536
+        x: 1920
         y: 0
-        width: 512
-        height: 640
+        width: 640
+        height: 358
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -357,10 +357,10 @@ TextureImporter:
       name: phoneguyjumpscare_11
       rect:
         serializedVersion: 2
-        x: 2048
+        x: 2560
         y: 0
-        width: 512
-        height: 640
+        width: 640
+        height: 358
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -378,10 +378,10 @@ TextureImporter:
       name: phoneguyjumpscare_12
       rect:
         serializedVersion: 2
-        x: 2560
+        x: 3200
         y: 0
-        width: 512
-        height: 640
+        width: 640
+        height: 358
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -399,10 +399,10 @@ TextureImporter:
       name: phoneguyjumpscare_13
       rect:
         serializedVersion: 2
-        x: 3072
+        x: 3840
         y: 0
-        width: 512
-        height: 640
+        width: 640
+        height: 358
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
