@@ -3,6 +3,7 @@ using System.Collections;
 using System.Collections.Generic;
 using Unity.VisualScripting;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class RICK : MonoBehaviour
 {
@@ -64,6 +65,12 @@ public class RICK : MonoBehaviour
                 rickoffice.gameObject.SetActive(true);
                 camerahandler.GetComponent<Cameras>().SwitchToCamDown();
                 rickjumpscaresound.Play();
+
+                // Wait for a few seconds after the jumpscare before changing the scene
+                yield return new WaitForSeconds(3f); // Change 3f to your desired delay
+
+                // Load the next scene
+                SceneManager.LoadScene("GameOver"); // Replace "YourNextScene" with your scene name
             }
         }
         StartCoroutine(rickMovement());

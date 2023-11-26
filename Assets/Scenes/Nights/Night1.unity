@@ -725,7 +725,7 @@ MonoBehaviour:
   rickoffice: {fileID: 31765977}
   camerahandler: {fileID: 205791899}
   rickjumpscaresound: {fileID: 860954559}
-  ailevel: 5
+  ailevel: 20
 --- !u!4 &102540967
 Transform:
   m_ObjectHideFlags: 0
