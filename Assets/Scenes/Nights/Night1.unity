@@ -725,7 +725,7 @@ MonoBehaviour:
   rickoffice: {fileID: 31765977}
   camerahandler: {fileID: 205791899}
   rickjumpscaresound: {fileID: 860954559}
-  ailevel: 1
+  ailevel: 5
 --- !u!4 &102540967
 Transform:
   m_ObjectHideFlags: 0
@@ -1447,7 +1447,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d8721eac752966a4a94b44cf848cfc9d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  gameDurationInSeconds: 5
+  gameDurationInSeconds: 120
   timeScale: 1
   textObject: {fileID: 1004403189}
 --- !u!4 &285248186
@@ -6001,7 +6001,7 @@ SpriteRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_Sprite: {fileID: 21300000, guid: 39fd285496049eb4a91a663267cf27b3, type: 3}
-  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_Color: {r: 0.3207547, g: 0.3207547, b: 0.3207547, a: 1}
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 0
