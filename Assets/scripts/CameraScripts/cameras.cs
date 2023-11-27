@@ -14,6 +14,7 @@ public class Cameras : MonoBehaviour
     public Camera Cam6;
     public Camera Cam7;
     public Camera Cam8;
+    public Camera closedoorcam;
 
     public Button Button1;
     public Button Button2;
@@ -24,10 +25,17 @@ public class Cameras : MonoBehaviour
     public Button Button7;
     public Button Button8;
 
+    public Button backtoofficebutton;
+
     public GameObject CamUpObject;
     public GameObject CamDownObject;
+    public GameObject DEURUI;
     AudioSource camswitcher;
     AudioSource camOpener;
+    public Animator deurdichtanim;
+
+    public GameObject opendoorimg;
+    public GameObject closedoorimg;
 
 
     private int SelectedCam = 1;
@@ -59,6 +67,8 @@ public class Cameras : MonoBehaviour
 
         CamUpObject.SetActive(true);
         CamDownObject.SetActive(false);
+
+        
     }
 
     // Update is called once per frame
@@ -67,6 +77,32 @@ public class Cameras : MonoBehaviour
 
     }
 
+    public void GoToDoor()
+    {
+        Office.gameObject.SetActive(false);
+        CamUpObject.SetActive(false);
+        DEURUI.SetActive(true);
+        closedoorcam.gameObject.SetActive(true);
+    }
+
+    public void ShutDoor()
+    {
+
+        deurdichtanim.Play("CLOSEDOOR" , -1, 0f);
+        backtoofficebutton.gameObject.SetActive(false);
+    }
+
+    public void OpenDoor() {
+    
+    }
+
+    public void BackToTheOffice()
+    {
+        Office.gameObject.SetActive(true);
+        CamUpObject.SetActive(true);
+        DEURUI.SetActive(false);
+        closedoorcam.gameObject.SetActive(false);
+    }
     private void SelectCam()
     {
         Cam1.gameObject.SetActive(false);
