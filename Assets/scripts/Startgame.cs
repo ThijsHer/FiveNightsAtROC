@@ -7,6 +7,6 @@ public class Startgame : MonoBehaviour
 {
     public void Load12AM()
     {
-        SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex + 1);
+        SceneManager.LoadScene("12AM");
     }
 }
