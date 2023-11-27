@@ -1202,8 +1202,10 @@ MonoBehaviour:
   CamDownObject: {fileID: 350881670}
   DEURUI: {fileID: 18064989}
   deurdichtanim: {fileID: 1418556783}
+  deuropenanim: {fileID: 0}
   opendoorimg: {fileID: 0}
   closedoorimg: {fileID: 1418556782}
+  buttontext: {fileID: 0}
 --- !u!4 &205791901
 Transform:
   m_ObjectHideFlags: 0

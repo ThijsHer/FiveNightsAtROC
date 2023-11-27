@@ -2,6 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
+using TMPro;
 
 public class Cameras : MonoBehaviour
 {
@@ -34,8 +35,9 @@ public class Cameras : MonoBehaviour
     AudioSource camOpener;
     public Animator deurdichtanim;
 
-    public GameObject opendoorimg;
     public GameObject closedoorimg;
+
+    public TMP_Text buttontext;
 
 
     private int SelectedCam = 1;
@@ -87,13 +89,22 @@ public class Cameras : MonoBehaviour
 
     public void ShutDoor()
     {
-
-        deurdichtanim.Play("CLOSEDOOR" , -1, 0f);
-        backtoofficebutton.gameObject.SetActive(false);
+        if (!(backtoofficebutton.IsActive()))
+        {
+            OpenDoor();
+        }
+        else
+        {
+            deurdichtanim.Play("CLOSEDOOR", -1, 0f);
+            backtoofficebutton.gameObject.SetActive(false);
+            buttontext.SetText("open");
+        }
     }
 
-    public void OpenDoor() {
-    
+    private void OpenDoor() {
+        deurdichtanim.Play("OPENDOOR", -1, 0f);
+        backtoofficebutton.gameObject.SetActive(true);
+        buttontext.SetText("close");
     }
 
     public void BackToTheOffice()
