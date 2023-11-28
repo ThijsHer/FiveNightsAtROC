@@ -1,5 +1,6 @@
 using System.Collections;
 using System.Collections.Generic;
+using TMPro;
 using UnityEngine;
 using UnityEngine.UI;
 
@@ -12,13 +13,26 @@ public class Test : MonoBehaviour
     private int m_IndexSprite;
     private Coroutine m_CoroutineAnim;
 
+    public Button backtoofficebutton;
+    public TMP_Text buttontext;
+
     public void Func_PlayUIAnim()
     {
-        if (m_CoroutineAnim != null)
-            StopCoroutine(m_CoroutineAnim);
 
-        m_IndexSprite = 0;
-        m_CoroutineAnim = StartCoroutine(Func_PlayAnim(true));
+        if (!(backtoofficebutton.IsActive()))
+        {
+            Func_ReverseUIAnim();
+        }
+        else
+        {
+            if (m_CoroutineAnim != null)
+                StopCoroutine(m_CoroutineAnim);
+
+            m_IndexSprite = 0;
+            m_CoroutineAnim = StartCoroutine(Func_PlayAnim(true));
+            backtoofficebutton.gameObject.SetActive(false);
+            buttontext.text = "open";
+        }
     }
 
     public void Func_ReverseUIAnim()
@@ -28,6 +42,8 @@ public class Test : MonoBehaviour
 
         m_IndexSprite = m_SpriteArray.Length - 1; // Start from the last sprite
         m_CoroutineAnim = StartCoroutine(Func_PlayAnim(false));
+        backtoofficebutton.gameObject.SetActive(true);
+        buttontext.text = "close";
     }
 
     IEnumerator Func_PlayAnim(bool playForward)

@@ -20,7 +20,7 @@ public class RICK : MonoBehaviour
     public int ailevel;
 
     public AudioSource RickWegVanDeur;
-
+    public Canvas deurui;
     public GameObject doorcam;
     public Button backtoofficebutton;
 
@@ -78,6 +78,7 @@ public class RICK : MonoBehaviour
                     rickcam1.gameObject.SetActive(false);
                     currentlocation = "office";
                     rickoffice.gameObject.SetActive(true);
+                    deurui.gameObject.SetActive(false);
                     camerahandler.GetComponent<Cameras>().SwitchToCamDown();
                     rickjumpscaresound.Play();
 

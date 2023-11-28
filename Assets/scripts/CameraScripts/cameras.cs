@@ -35,9 +35,9 @@ public class Cameras : MonoBehaviour
     AudioSource camOpener;
     public Animator deurdichtanim;
 
-    public GameObject closedoorimg;
 
     public TMP_Text buttontext;
+
 
 
     private int SelectedCam = 1;
@@ -85,6 +85,7 @@ public class Cameras : MonoBehaviour
         CamUpObject.SetActive(false);
         DEURUI.SetActive(true);
         closedoorcam.gameObject.SetActive(true);
+
     }
 
     public void ShutDoor()
@@ -113,6 +114,7 @@ public class Cameras : MonoBehaviour
         CamUpObject.SetActive(true);
         DEURUI.SetActive(false);
         closedoorcam.gameObject.SetActive(false);
+
     }
     private void SelectCam()
     {
