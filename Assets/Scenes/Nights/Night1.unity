@@ -1539,12 +1539,9 @@ MonoBehaviour:
   tvDisplay: {fileID: 1525603951}
   jumpscareObject: {fileID: 1720880140}
   hideButton: {fileID: 1916138973}
-  minDisplayTime: 30
-  maxDisplayTime: 60
-  timeToClickButton: 10
-  timeBeforeJumpscare: 10
   jumpscareaudio: {fileID: 0}
   dislayyaudio: {fileID: 0}
+  currentAILevel: 1
 --- !u!4 &259880663
 Transform:
   m_ObjectHideFlags: 0
@@ -7434,8 +7431,8 @@ Transform:
   m_GameObject: {fileID: 1720880140}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -4.2711306, y: -2.6491954, z: 20.921774}
-  m_LocalScale: {x: 2.4054, y: 2.4054, z: 2.4054}
+  m_LocalPosition: {x: -4.2711306, y: -2.6401, z: 20.921774}
+  m_LocalScale: {x: 2.4054, y: 2.5644808, z: 2.4054}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 259880663}
