@@ -4,6 +4,7 @@ using System.Collections.Generic;
 using Unity.VisualScripting;
 using UnityEngine;
 using UnityEngine.SceneManagement;
+using UnityEngine.UI;
 
 public class RICK : MonoBehaviour
 {
@@ -17,6 +18,11 @@ public class RICK : MonoBehaviour
     public AudioSource rickjumpscaresound;
     private string currentlocation;
     public int ailevel;
+
+    public AudioSource RickWegVanDeur;
+
+    public GameObject doorcam;
+    public Button backtoofficebutton;
 
     void Start()
     {
@@ -60,17 +66,28 @@ public class RICK : MonoBehaviour
             }
             else if (currentlocation == "cam1")
             {
-                rickcam1.gameObject.SetActive(false);
-                currentlocation = "office";
-                rickoffice.gameObject.SetActive(true);
-                camerahandler.GetComponent<Cameras>().SwitchToCamDown();
-                rickjumpscaresound.Play();
+                if (doorcam.activeSelf && !(backtoofficebutton.IsActive()))
+                {
+                    rickcam1.gameObject.SetActive(false);
+                    currentlocation = "cam7";
+                    rickcam7.gameObject.SetActive(true);
+                    RickWegVanDeur.Play();
+                }
+                else
+                {
+                    rickcam1.gameObject.SetActive(false);
+                    currentlocation = "office";
+                    rickoffice.gameObject.SetActive(true);
+                    camerahandler.GetComponent<Cameras>().SwitchToCamDown();
+                    rickjumpscaresound.Play();
 
-                // Wait for a few seconds after the jumpscare before changing the scene
-                yield return new WaitForSeconds(3f); // Change 3f to your desired delay
+                    // Wait for a few seconds after the jumpscare before changing the scene
+                    yield return new WaitForSeconds(3f); // Change 3f to your desired delay
 
-                // Load the next scene
-                SceneManager.LoadScene("GameOver"); // Replace "YourNextScene" with your scene name
+                    // Load the next scene
+                    SceneManager.LoadScene("GameOver"); // Replace "YourNextScene" with your scene name
+                }
+
             }
         }
         StartCoroutine(rickMovement());
