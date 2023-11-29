@@ -64,7 +64,7 @@ public class TimeManager : MonoBehaviour
         }
         else if (currentHour == 1)
         {
-            rickAI.ailevel = 2;
+            rickAI.ailevel = 3;
             korsAI.currentAILevel = 1;
            
         }
@@ -75,12 +75,12 @@ public class TimeManager : MonoBehaviour
         }
         else if (currentHour == 3)
         {
-            rickAI.ailevel = 3;
+            rickAI.ailevel = 4;
             korsAI.currentAILevel = 1;
         }
         else if (currentHour == 4)
         {
-            rickAI.ailevel = 4;
+            rickAI.ailevel = 5;
             korsAI.currentAILevel = 2;
         }
         else if (currentHour == 5)
