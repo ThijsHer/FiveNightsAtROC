@@ -73,9 +73,9 @@ public class RICK : MonoBehaviour
             }
             
         }
-        else if (currentlocation == "cam1")
+        if (currentlocation == "cam1")
         {
-            yield return new WaitForSeconds(5f);
+            yield return new WaitForSeconds(8f);
             if (doorcam.activeSelf && !(backtoofficebutton.IsActive()))
             {
                 rickcam1.gameObject.SetActive(false);
