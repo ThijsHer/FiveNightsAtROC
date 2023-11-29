@@ -1542,6 +1542,8 @@ MonoBehaviour:
   hideButton: {fileID: 1916138973}
   jumpscareaudio: {fileID: 0}
   dislayyaudio: {fileID: 0}
+  deurui: {fileID: 18064992}
+  camerahandler: {fileID: 205791899}
   currentAILevel: 1
 --- !u!4 &259880663
 Transform:
@@ -1749,9 +1751,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d8721eac752966a4a94b44cf848cfc9d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  gameDurationInSeconds: 226
+  gameDurationInSeconds: 300
   timeScale: 1
   textObject: {fileID: 1004403189}
+  rickAI: {fileID: 102540966}
+  korsAI: {fileID: 259880662}
 --- !u!4 &285248186
 Transform:
   m_ObjectHideFlags: 0

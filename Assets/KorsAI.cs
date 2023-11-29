@@ -11,6 +11,8 @@ public class KorsAI : MonoBehaviour
     public Button hideButton;
     public AudioSource jumpscareaudio;
     public AudioSource dislayyaudio;
+    public Canvas deurui;
+    public GameObject camerahandler;
 
     private bool isWaitingForInput = false;
     private bool isJumpscareTriggered = false; // Flag to track if jumpscare is triggered
@@ -73,6 +75,8 @@ public class KorsAI : MonoBehaviour
             if (timer >= timeBeforeJumpScares[currentAILevel - 1] && !isJumpscareTriggered)
             {
                 isJumpscareTriggered = true;
+                deurui.gameObject.SetActive(false);
+                camerahandler.GetComponent<Cameras>().SwitchToCamDown();
                 jumpscareObject.SetActive(true);
                 tvDisplay.SetActive(false);
 

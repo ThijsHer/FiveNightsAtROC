@@ -15,6 +15,9 @@ public class TimeManager : MonoBehaviour
     private int currentHour = 0; // Track the current in-game hour
     private bool gameEnded = false;
 
+    public RICK rickAI;
+    public KorsAI korsAI;
+
     void Start()
     {
         currentTime = gameDurationInSeconds; // Start time set to the game duration
@@ -25,7 +28,6 @@ public class TimeManager : MonoBehaviour
         {
             Debug.LogError("No TextMeshProUGUI component found on the provided GameObject.");
         }
-
         UpdateTimerDisplay();
     }
 
@@ -54,6 +56,38 @@ public class TimeManager : MonoBehaviour
 
         // Update the UI Text element
         timerText.text = "" + timeString;
+
+        if (currentHour == 0)
+        {
+            rickAI.ailevel = 0;
+            korsAI.currentAILevel = 1;
+        }
+        else if (currentHour == 1)
+        {
+            rickAI.ailevel = 2;
+            korsAI.currentAILevel = 1;
+           
+        }
+        else if(currentHour == 2)
+        {
+            rickAI.ailevel = 3;
+            korsAI.currentAILevel = 1;
+        }
+        else if (currentHour == 3)
+        {
+            rickAI.ailevel = 3;
+            korsAI.currentAILevel = 1;
+        }
+        else if (currentHour == 4)
+        {
+            rickAI.ailevel = 4;
+            korsAI.currentAILevel = 2;
+        }
+        else if (currentHour == 5)
+        {
+            rickAI.ailevel = 5;
+            korsAI.currentAILevel = 2;
+        }
     }
 
     void EndGame()
