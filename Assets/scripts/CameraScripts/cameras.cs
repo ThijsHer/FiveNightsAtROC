@@ -81,10 +81,7 @@ public class Cameras : MonoBehaviour
 
     public void GoToDoor()
     {
-        Office.gameObject.SetActive(false);
-        CamUpObject.SetActive(false);
-        DEURUI.SetActive(true);
-        closedoorcam.gameObject.SetActive(true);
+        StartCoroutine(todooranim());
 
     }
 
@@ -110,10 +107,7 @@ public class Cameras : MonoBehaviour
 
     public void BackToTheOffice()
     {
-        Office.gameObject.SetActive(true);
-        CamUpObject.SetActive(true);
-        DEURUI.SetActive(false);
-        closedoorcam.gameObject.SetActive(false);
+        StartCoroutine (toofficeanim());
 
     }
     private void SelectCam()
@@ -180,28 +174,14 @@ public class Cameras : MonoBehaviour
 
     public void SwitchToCamUp()
     {
-        Office.gameObject.SetActive(false);
-        SelectCam();
 
+        StartCoroutine(camonanim());
 
-        CamUpObject.SetActive(false);
-        CamDownObject.SetActive(true);
-        camOpener.Play();
     }
 
     public void SwitchToCamDown()
     {
-        Office.gameObject.SetActive(true);
-        Cam1.gameObject.SetActive(false);
-        Cam2.gameObject.SetActive(false);
-        Cam3.gameObject.SetActive(false);
-        Cam4.gameObject.SetActive(false);
-        Cam5.gameObject.SetActive(false);
-        Cam6.gameObject.SetActive(false);
-        Cam7.gameObject.SetActive(false);
-        Cam8.gameObject.SetActive(false);
-        CamUpObject.SetActive(true);
-        CamDownObject.SetActive(false);
+        StartCoroutine (camoffanim());
     }
 
     public void Camera1()
@@ -257,5 +237,96 @@ public class Cameras : MonoBehaviour
         SelectCam();
         camswitcher.Play();
     }
+
+
+    IEnumerator camonanim()
+    {
+        CamUpObject.SetActive(false);
+        Office.orthographicSize = 4;
+        yield return new WaitForSeconds(0.1f);
+        Office.orthographicSize = 3;
+        yield return new WaitForSeconds(0.1f);
+        Office.transform.Translate(0, -1, 0);
+        Office.orthographicSize = 2;
+        yield return new WaitForSeconds(0.1f);
+        Office.orthographicSize = 1;
+        yield return new WaitForSeconds(0.1f);
+        Office.gameObject.SetActive(false);
+        SelectCam();
+
+
+        
+        CamDownObject.SetActive(true);
+        camOpener.Play();
+
+    }
+    IEnumerator camoffanim()
+    {
+        Office.gameObject.SetActive(true);
+        Cam1.gameObject.SetActive(false);
+        Cam2.gameObject.SetActive(false);
+        Cam3.gameObject.SetActive(false);
+        Cam4.gameObject.SetActive(false);
+        Cam5.gameObject.SetActive(false);
+        Cam6.gameObject.SetActive(false);
+        Cam7.gameObject.SetActive(false);
+        Cam8.gameObject.SetActive(false);
+        CamDownObject.SetActive(false);
+        yield return new WaitForSeconds(0.1f);
+        Office.orthographicSize = 2;
+        yield return new WaitForSeconds(0.1f);
+        Office.orthographicSize = 3;
+        yield return new WaitForSeconds(0.1f);
+        Office.orthographicSize = 4;
+        Office.transform.Translate(0, 1, 0);
+        yield return new WaitForSeconds(0.1f);
+        Office.orthographicSize = 5;
+        CamUpObject.SetActive(true);
+    }
+
+    IEnumerator todooranim()
+    {
+        CamUpObject.SetActive(false);
+        Office.orthographicSize = 4;
+        Office.transform.Translate(-1, 1, 0);
+        yield return new WaitForSeconds(0.1f);
+        Office.orthographicSize = 3;
+        Office.transform.Translate(-1, 0, 0);
+        yield return new WaitForSeconds(0.1f);
+        Office.orthographicSize = 2;
+        Office.transform.Translate(-1, 0, 0);
+        yield return new WaitForSeconds(0.1f);
+        Office.orthographicSize = 1;
+        yield return new WaitForSeconds(0.1f);
+        Office.gameObject.SetActive(false);
+        
+        DEURUI.SetActive(true);
+        closedoorcam.gameObject.SetActive(true);
+    }
+    IEnumerator toofficeanim()
+    {
+        Office.gameObject.SetActive(true);
+
+        DEURUI.SetActive(false);
+        closedoorcam.gameObject.SetActive(false);
+        yield return new WaitForSeconds(0.1f);
+        Office.orthographicSize = 2;
+        Office.transform.Translate(1, 0, 0);
+        yield return new WaitForSeconds(0.1f);
+        Office.orthographicSize = 3;
+        Office.transform.Translate(1, 0, 0);
+        yield return new WaitForSeconds(0.1f);
+        Office.orthographicSize = 4;
+        Office.transform.Translate(1, -1, 0);
+        yield return new WaitForSeconds(0.1f);
+        Office.orthographicSize = 5;
+        yield return new WaitForSeconds(0.1f);
+        CamUpObject.SetActive(true);
+
+
+    }
+
+
+
 }
 
