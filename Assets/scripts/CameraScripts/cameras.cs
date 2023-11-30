@@ -35,6 +35,13 @@ public class Cameras : MonoBehaviour
     AudioSource camOpener;
     public Animator deurdichtanim;
 
+    public GameObject staticcam7;
+    public GameObject staticcam6;
+    public GameObject staticcam5;
+    public GameObject staticcam4;
+    public GameObject staticcam3;
+    public GameObject staticcam2;
+    public GameObject staticcam1;
 
     public TMP_Text buttontext;
 
@@ -110,7 +117,7 @@ public class Cameras : MonoBehaviour
         StartCoroutine (toofficeanim());
 
     }
-    private void SelectCam()
+    IEnumerator SelectCam()
     {
         Cam1.gameObject.SetActive(false);
         Cam2.gameObject.SetActive(false);
@@ -132,38 +139,60 @@ public class Cameras : MonoBehaviour
 
         if (SelectedCam == 1)
         {
+            
             Cam1.gameObject.SetActive(true);
             Button1.interactable = false;
+            staticcam1.SetActive(true);
+            yield return new WaitForSeconds(0.1f);
+            staticcam1.SetActive(false);
         }
         else if (SelectedCam == 2)
         {
             Cam2.gameObject.SetActive(true);
             Button2.interactable = false;
+            staticcam2.SetActive(true);
+            yield return new WaitForSeconds(0.1f);
+            staticcam2.SetActive(false);
         }
         else if (SelectedCam == 3)
         {
             Cam3.gameObject.SetActive(true);
             Button3.interactable = false;
+            staticcam3.SetActive(true);
+            yield return new WaitForSeconds(0.1f);
+            staticcam3.SetActive(false);
         }
         else if (SelectedCam == 4)
         {
             Cam4.gameObject.SetActive(true);
             Button4.interactable = false;
+            staticcam4.SetActive(true);
+            yield return new WaitForSeconds(0.1f);
+            staticcam4.SetActive(false);
         }
         else if (SelectedCam == 5)
         {
             Cam5.gameObject.SetActive(true);
             Button5.interactable = false;
+            staticcam5.SetActive(true);
+            yield return new WaitForSeconds(0.1f);
+            staticcam5.SetActive(false);
         }
         else if (SelectedCam == 6)
         {
             Cam6.gameObject.SetActive(true);
             Button6.interactable = false;
+            staticcam6.SetActive(true);
+            yield return new WaitForSeconds(0.1f);
+            staticcam6.SetActive(false);
         }
         else if (SelectedCam == 7)
         {
             Cam7.gameObject.SetActive(true);
             Button7.interactable = false;
+            staticcam7.SetActive(true);
+            yield return new WaitForSeconds(0.1f);
+            staticcam7.SetActive(false);
         }
         else if (SelectedCam == 8)
         {
@@ -186,55 +215,56 @@ public class Cameras : MonoBehaviour
 
     public void Camera1()
     {
+
         SelectedCam = 1;
-        SelectCam();
+        StartCoroutine(SelectCam());
         camswitcher.Play();
     }
     public void Camera2()
     {
         SelectedCam = 2;
-        SelectCam();
+        StartCoroutine(SelectCam());
         camswitcher.Play();
     }
 
     public void Camera3()
     {
         SelectedCam = 3;
-        SelectCam();
+        StartCoroutine(SelectCam());
         camswitcher.Play();
     }
     public void Camera4()
     {
         SelectedCam = 4;
-        SelectCam();
+        StartCoroutine(SelectCam());
         camswitcher.Play();
     }
 
     public void Camera5()
     {
         SelectedCam = 5;
-        SelectCam();
+        StartCoroutine(SelectCam());
         camswitcher.Play();
     }
 
     public void Camera6()
     {
         SelectedCam = 6;
-        SelectCam();
+        StartCoroutine(SelectCam());
         camswitcher.Play();
     }
 
     public void Camera7()
     {
         SelectedCam = 7;
-        SelectCam();
+        StartCoroutine(SelectCam());
         camswitcher.Play();
     }
 
     public void Camera8()
     {
         SelectedCam = 8;
-        SelectCam();
+        StartCoroutine(SelectCam());
         camswitcher.Play();
     }
 
@@ -252,7 +282,7 @@ public class Cameras : MonoBehaviour
         Office.orthographicSize = 1;
         yield return new WaitForSeconds(0.1f);
         Office.gameObject.SetActive(false);
-        SelectCam();
+        StartCoroutine(SelectCam());
 
 
         
