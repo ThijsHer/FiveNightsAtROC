@@ -16,6 +16,9 @@ public class Test : MonoBehaviour
     public Button backtoofficebutton;
     public TMP_Text buttontext;
 
+    public AudioSource deuropenen;
+    public AudioSource deurdichtenen;
+
     public void Func_PlayUIAnim()
     {
 
@@ -32,6 +35,7 @@ public class Test : MonoBehaviour
             m_CoroutineAnim = StartCoroutine(Func_PlayAnim(true));
             backtoofficebutton.gameObject.SetActive(false);
             buttontext.text = "open";
+            deurdichtenen.Play();
         }
     }
 
@@ -44,6 +48,7 @@ public class Test : MonoBehaviour
         m_CoroutineAnim = StartCoroutine(Func_PlayAnim(false));
         backtoofficebutton.gameObject.SetActive(true);
         buttontext.text = "close";
+        deuropenen.Play();
     }
 
     IEnumerator Func_PlayAnim(bool playForward)
