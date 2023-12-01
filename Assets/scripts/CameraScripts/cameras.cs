@@ -115,7 +115,20 @@ public class Cameras : MonoBehaviour
 
     public void BackToTheOffice(Boolean externaltrigger)
     {
-        StartCoroutine (toofficeanim());
+
+        if (externaltrigger && DEURUI.activeSelf)
+        {
+
+        }
+        else if (externaltrigger && !(DEURUI.activeSelf))
+        {
+
+        }
+        else
+        {
+            StartCoroutine(toofficeanim());
+        }
+        
 
     }
     IEnumerator SelectCam()
