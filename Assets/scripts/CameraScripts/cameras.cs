@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 using TMPro;
+using System;
 
 public class Cameras : MonoBehaviour
 {
@@ -112,7 +113,7 @@ public class Cameras : MonoBehaviour
         buttontext.SetText("close");
     }
 
-    public void BackToTheOffice()
+    public void BackToTheOffice(Boolean externaltrigger)
     {
         StartCoroutine (toofficeanim());
 
@@ -208,9 +209,42 @@ public class Cameras : MonoBehaviour
 
     }
 
-    public void SwitchToCamDown()
+    public void SwitchToCamDown(Boolean externaltrigger)
     {
-        StartCoroutine (camoffanim());
+
+        if (externaltrigger && !(CamDownObject.activeSelf))
+        {
+            Office.gameObject.SetActive(true);
+            Cam1.gameObject.SetActive(false);
+            Cam2.gameObject.SetActive(false);
+            Cam3.gameObject.SetActive(false);
+            Cam4.gameObject.SetActive(false);
+            Cam5.gameObject.SetActive(false);
+            Cam6.gameObject.SetActive(false);
+            Cam7.gameObject.SetActive(false);
+            Cam8.gameObject.SetActive(false);
+            CamDownObject.SetActive(false);
+
+        }
+        else if (externaltrigger && CamDownObject)
+        {
+            Office.gameObject.SetActive(true);
+            Cam1.gameObject.SetActive(false);
+            Cam2.gameObject.SetActive(false);
+            Cam3.gameObject.SetActive(false);
+            Cam4.gameObject.SetActive(false);
+            Cam5.gameObject.SetActive(false);
+            Cam6.gameObject.SetActive(false);
+            Cam7.gameObject.SetActive(false);
+            Cam8.gameObject.SetActive(false);
+            CamDownObject.SetActive(false);
+            Office.transform.Translate(0, 1, 0);
+            Office.orthographicSize = 5;
+        }
+        else
+        {
+            StartCoroutine(camoffanim());
+        }
     }
 
     public void Camera1()

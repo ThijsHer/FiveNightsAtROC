@@ -74,9 +74,9 @@ public class KorsAI : MonoBehaviour
 
             if (timer >= timeBeforeJumpScares[currentAILevel - 1] && !isJumpscareTriggered)
             {
+                camerahandler.GetComponent<Cameras>().SwitchToCamDown(true);
+                camerahandler.GetComponent<Cameras>().BackToTheOffice(true);
                 isJumpscareTriggered = true;
-                deurui.gameObject.SetActive(false);
-                camerahandler.GetComponent<Cameras>().SwitchToCamDown();
                 jumpscareObject.SetActive(true);
                 tvDisplay.SetActive(false);
 

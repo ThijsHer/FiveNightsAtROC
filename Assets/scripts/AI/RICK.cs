@@ -127,7 +127,8 @@ public class RICK : MonoBehaviour
                 currentlocation = "office";
                 rickoffice.gameObject.SetActive(true);
                 deurui.gameObject.SetActive(false);
-                camerahandler.GetComponent<Cameras>().SwitchToCamDown();
+                camerahandler.GetComponent<Cameras>().SwitchToCamDown(true);
+                camerahandler.GetComponent<Cameras>().BackToTheOffice(true);
                 rickjumpscaresound.Play();
 
                 // Wait for a few seconds after the jumpscare before changing the scene
