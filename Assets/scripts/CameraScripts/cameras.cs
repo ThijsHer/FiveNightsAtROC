@@ -118,11 +118,21 @@ public class Cameras : MonoBehaviour
 
         if (externaltrigger && DEURUI.activeSelf)
         {
+            Debug.Log("no game");
+            Office.gameObject.SetActive(true);
 
+            DEURUI.SetActive(false);
+            closedoorcam.gameObject.SetActive(false);
+            Office.transform.Translate(3, -1, 0);
+            Office.orthographicSize = 5;
         }
         else if (externaltrigger && !(DEURUI.activeSelf))
         {
+            Debug.Log("triple gawk");
+            Office.gameObject.SetActive(true);
 
+            DEURUI.SetActive(false);
+            closedoorcam.gameObject.SetActive(false);
         }
         else
         {

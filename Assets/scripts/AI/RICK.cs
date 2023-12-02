@@ -126,7 +126,6 @@ public class RICK : MonoBehaviour
                 rickcam1.gameObject.SetActive(false);
                 currentlocation = "office";
                 rickoffice.gameObject.SetActive(true);
-                deurui.gameObject.SetActive(false);
                 camerahandler.GetComponent<Cameras>().SwitchToCamDown(true);
                 camerahandler.GetComponent<Cameras>().BackToTheOffice(true);
                 rickjumpscaresound.Play();

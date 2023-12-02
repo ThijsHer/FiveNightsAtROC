@@ -24,7 +24,7 @@ public class KorsAI : MonoBehaviour
     private float[] timeBeforeJumpScares = { 10f, 10f, 10f, 10f, 10f, 10f }; // Time before jumpscare for each level
 
     // Current AI level (for example, set it externally based on the game progress)
-    public int currentAILevel = 1;
+    public int currentAILevel;
 
     void Start()
     {
@@ -35,6 +35,7 @@ public class KorsAI : MonoBehaviour
 
     IEnumerator ShowTVDisplay()
     {
+        yield return new WaitForSeconds(0.1f);
         while (true)
         {
             float displayTime = Random.Range(minDisplayTimes[currentAILevel - 1], maxDisplayTimes[currentAILevel - 1]);
