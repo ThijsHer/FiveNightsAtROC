@@ -16,6 +16,7 @@ public class Cameras : MonoBehaviour
     public Camera Cam6;
     public Camera Cam7;
     public Camera Cam8;
+    public Camera Cam9;
     public Camera closedoorcam;
 
     public Button Button1;
@@ -26,6 +27,7 @@ public class Cameras : MonoBehaviour
     public Button Button6;
     public Button Button7;
     public Button Button8;
+    public Button Button9;
 
     public Button backtoofficebutton;
 
@@ -65,6 +67,7 @@ public class Cameras : MonoBehaviour
         Cam6.gameObject.SetActive(false);
         Cam7.gameObject.SetActive(false);
         Cam8.gameObject.SetActive(false);
+        Cam9.gameObject.SetActive(false);
 
         Button1.interactable = false;
         Button2.interactable = true;
@@ -74,6 +77,7 @@ public class Cameras : MonoBehaviour
         Button6.interactable = true;
         Button7.interactable = true;
         Button8.interactable = true;
+        Button9.interactable = true;
 
         CamUpObject.SetActive(true);
         CamDownObject.SetActive(false);
@@ -151,6 +155,7 @@ public class Cameras : MonoBehaviour
         Cam6.gameObject.SetActive(false);
         Cam7.gameObject.SetActive(false);
         Cam8.gameObject.SetActive(false);
+        Cam9.gameObject.SetActive(false);
 
         Button1.interactable = true;
         Button2.interactable = true;
@@ -160,6 +165,7 @@ public class Cameras : MonoBehaviour
         Button6.interactable = true;
         Button7.interactable = true;
         Button8.interactable = true;
+        Button9.interactable = true;
 
         if (SelectedCam == 1)
         {
@@ -223,6 +229,11 @@ public class Cameras : MonoBehaviour
             Cam8.gameObject.SetActive(true);
             Button8.interactable = false;
         }
+        else if (SelectedCam == 9)
+        {
+            Cam9.gameObject.SetActive(true);
+            Button9.interactable = false;
+        }
     }
 
     public void SwitchToCamUp()
@@ -246,6 +257,7 @@ public class Cameras : MonoBehaviour
             Cam6.gameObject.SetActive(false);
             Cam7.gameObject.SetActive(false);
             Cam8.gameObject.SetActive(false);
+            Cam9.gameObject.SetActive(false);
             CamDownObject.SetActive(false);
 
         }
@@ -260,6 +272,7 @@ public class Cameras : MonoBehaviour
             Cam6.gameObject.SetActive(false);
             Cam7.gameObject.SetActive(false);
             Cam8.gameObject.SetActive(false);
+            Cam9.gameObject.SetActive(false);
             CamDownObject.SetActive(false);
             Office.transform.Translate(0, 1, 0);
             Office.orthographicSize = 5;
@@ -325,6 +338,13 @@ public class Cameras : MonoBehaviour
         camswitcher.Play();
     }
 
+    public void Camera9()
+    {
+        SelectedCam = 9;
+        StartCoroutine(SelectCam());
+        camswitcher.Play();
+    }
+
 
     IEnumerator camonanim()
     {
@@ -358,6 +378,7 @@ public class Cameras : MonoBehaviour
         Cam6.gameObject.SetActive(false);
         Cam7.gameObject.SetActive(false);
         Cam8.gameObject.SetActive(false);
+        Cam9.gameObject.SetActive(false);
         CamDownObject.SetActive(false);
         yield return new WaitForSeconds(0.1f);
         Office.orthographicSize = 2;
