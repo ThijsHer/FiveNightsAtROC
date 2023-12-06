@@ -12,10 +12,16 @@ public class PaulAI : MonoBehaviour
 
     public GameObject audiolure;
 
+    public AudioSource poephoofd;
+    public AudioSource wifi;
+
     public GameObject staticcam8;
 
     private string currentlocation;
     public int ailevel;
+
+    public GameObject camerahandler;
+    public GameObject cambutton;
     void Start()
     {
         currentlocation = "paulphase1";
@@ -72,8 +78,47 @@ public class PaulAI : MonoBehaviour
                 yield return new WaitForSeconds(0.1f);
                 staticcam8.SetActive(false);
             }
-            StartCoroutine(paulMovement());
+            else if (currentlocation == "paulphase5")
+            {
+                camerahandler.GetComponent<Cameras>().SwitchToCamDown(false);
+                cambutton.SetActive(false);
+                wifi.Play();
+                currentlocation = "pauldown";
+            }
+
         }
+        StartCoroutine(paulMovement());
+    }
+
+
+    public void callpaul()
+    {
+        StartCoroutine(Lure());
+    }
+    IEnumerator Lure() {
+        audiolure.SetActive(false);
+        poephoofd.Play();
+        if (currentlocation == "paulphase4" || currentlocation == "paulphase5")
+        {
+            currentlocation = "pauldown";
+            yield return new WaitForSeconds(poephoofd.clip.length);
+
+            staticcam8.SetActive(true);
+            paulphase4.gameObject.SetActive(false);
+            paulphase5.gameObject.SetActive(false);
+            currentlocation = "paulphase1";
+            paulphase1.gameObject.SetActive(true);
+            yield return new WaitForSeconds(0.1f);
+            staticcam8.SetActive(false);
+        }
+        else
+        {
+            yield return new WaitForSeconds(poephoofd.clip.length);
+            staticcam8.SetActive(true);
+
+        }
+        yield return new WaitForSeconds(10f);
+        audiolure.SetActive(true);
     }
 }
 

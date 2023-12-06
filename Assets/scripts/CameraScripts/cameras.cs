@@ -277,6 +277,19 @@ public class Cameras : MonoBehaviour
             Office.transform.Translate(0, 1, 0);
             Office.orthographicSize = 5;
         }
+        else if (!(CamDownObject.activeSelf)) {
+            Office.gameObject.SetActive(true);
+            Cam1.gameObject.SetActive(false);
+            Cam2.gameObject.SetActive(false);
+            Cam3.gameObject.SetActive(false);
+            Cam4.gameObject.SetActive(false);
+            Cam5.gameObject.SetActive(false);
+            Cam6.gameObject.SetActive(false);
+            Cam7.gameObject.SetActive(false);
+            Cam8.gameObject.SetActive(false);
+            Cam9.gameObject.SetActive(false);
+            CamDownObject.SetActive(false);
+        }
         else
         {
             StartCoroutine(camoffanim());
