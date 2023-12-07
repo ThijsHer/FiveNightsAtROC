@@ -18,9 +18,11 @@ public class PaulAI : MonoBehaviour
     public AudioSource break1;
     public AudioSource break2;
     public AudioSource paulgression;
+    public AudioSource angry;
 
     public GameObject staticcam8;
     public GameObject cambrokenui;
+    public GameObject wifilogo;
 
     private string currentlocation;
     public int ailevel;
@@ -123,6 +125,7 @@ public class PaulAI : MonoBehaviour
                 cambutton.SetActive(false);
                 wifi.Play();
                 currentlocation = "pauldown";
+                wifilogo.gameObject.SetActive(true);
             }
         }
 
@@ -160,6 +163,7 @@ public class PaulAI : MonoBehaviour
             paulphase3.SetActive(false);
             paulscare.SetActive(true);
             yield return new WaitForSeconds(poephoofd.clip.length);
+            angry.Play();
             paulscare.transform.localScale = new Vector3(0.2f, 0.2f, 0.2f);
             yield return new WaitForSeconds(0.1f);
             paulscare.transform.localScale = new Vector3(0.4f, 0.4f, 0.4f);
