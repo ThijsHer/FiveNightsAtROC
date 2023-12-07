@@ -4,6 +4,7 @@ using UnityEngine;
 
 public class PaulAI : MonoBehaviour
 {
+    public GameObject paulscare;
     public GameObject paulphase5;
     public GameObject paulphase4;
     public GameObject paulphase3;
@@ -14,8 +15,12 @@ public class PaulAI : MonoBehaviour
 
     public AudioSource poephoofd;
     public AudioSource wifi;
+    public AudioSource break1;
+    public AudioSource break2;
+    public AudioSource paulgression;
 
     public GameObject staticcam8;
+    public GameObject cambrokenui;
 
     private string currentlocation;
     public int ailevel;
@@ -55,6 +60,7 @@ public class PaulAI : MonoBehaviour
         }
 
         obj.transform.position = new Vector3(obj.transform.position.x, originalY, obj.transform.position.z);
+        StartCoroutine(JumpEffect(paulphase5.gameObject));
     }
 
     IEnumerator paulMovement()
@@ -68,6 +74,7 @@ public class PaulAI : MonoBehaviour
         {
             if (currentlocation == "paulphase1")
             {
+                paulgression.Play();
                 staticcam8.SetActive(true);
                 paulphase1.gameObject.SetActive(false);
                 currentlocation = "paulphase2";
@@ -77,6 +84,7 @@ public class PaulAI : MonoBehaviour
             }
             else if (currentlocation == "paulphase2")
             {
+                paulgression.Play();
                 staticcam8.SetActive(true);
                 paulphase2.gameObject.SetActive(false);
                 currentlocation = "paulphase3";
@@ -86,6 +94,7 @@ public class PaulAI : MonoBehaviour
             }
             else if (currentlocation == "paulphase3")
             {
+                paulgression.Play();
                 staticcam8.SetActive(true);
                 paulphase3.gameObject.SetActive(false);
                 currentlocation = "paulphase4";
@@ -95,6 +104,7 @@ public class PaulAI : MonoBehaviour
             }
             else if (currentlocation == "paulphase4")
             {
+                paulgression.Play();
                 staticcam8.SetActive(true);
                 paulphase4.gameObject.SetActive(false);
                 currentlocation = "paulphase5";
@@ -103,15 +113,20 @@ public class PaulAI : MonoBehaviour
                 staticcam8.SetActive(false);
                 StartCoroutine(JumpEffect(paulphase5.gameObject));
             }
-            else if (currentlocation == "paulphase5")
+        }
+        if (currentlocation == "paulphase5")
+        {
+            yield return new WaitForSeconds(8f);
+            if (currentlocation == "paulphase5")
             {
                 camerahandler.GetComponent<Cameras>().SwitchToCamDown(false);
                 cambutton.SetActive(false);
                 wifi.Play();
                 currentlocation = "pauldown";
             }
-
         }
+
+
         StartCoroutine(paulMovement());
     }
 
@@ -119,7 +134,8 @@ public class PaulAI : MonoBehaviour
     {
         StartCoroutine(Lure());
     }
-    IEnumerator Lure() {
+    IEnumerator Lure()
+    {
         audiolure.SetActive(false);
         poephoofd.Play();
         if (currentlocation == "paulphase4" || currentlocation == "paulphase5")
@@ -137,8 +153,32 @@ public class PaulAI : MonoBehaviour
         }
         else
         {
+            string previousloc = currentlocation;
+            currentlocation = "pauldown";
+            paulphase1.SetActive(false);
+            paulphase2.SetActive(false);
+            paulphase3.SetActive(false);
+            paulscare.SetActive(true);
             yield return new WaitForSeconds(poephoofd.clip.length);
-            staticcam8.SetActive(true);
+            paulscare.transform.localScale = new Vector3(0.2f, 0.2f, 0.2f);
+            yield return new WaitForSeconds(0.1f);
+            paulscare.transform.localScale = new Vector3(0.4f, 0.4f, 0.4f);
+            yield return new WaitForSeconds(0.1f);
+            paulscare.transform.localScale = new Vector3(0.8f, 0.8f, 0.8f);
+            yield return new WaitForSeconds(0.1f);
+            paulscare.transform.localScale = new Vector3(1.4f, 1.4f, 1.4f);
+            yield return new WaitForSeconds(0.1f);
+            paulscare.transform.localScale = new Vector3(2.0f, 2.0f, 2.0f);
+            yield return new WaitForSeconds(0.1f);
+            paulscare.transform.localScale = new Vector3(2.5f, 2.5f, 2.5f);
+            yield return new WaitForSeconds(0.1f);
+            paulscare.transform.localScale = new Vector3(3f, 3f, 3f);
+            yield return new WaitForSeconds(0.1f);
+            break1.Play();
+            break2.Play();
+
+            cambrokenui.SetActive(true);
+            currentlocation = previousloc;
 
         }
         yield return new WaitForSeconds(10f);
