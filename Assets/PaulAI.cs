@@ -33,6 +33,30 @@ public class PaulAI : MonoBehaviour
     {
 
     }
+
+    [SerializeField] float jumpHeight = 0.2f; // Adjust this value for the jump height
+    [SerializeField] float jumpDuration = 0.5f; // Adjust this value for the jump duration
+
+    IEnumerator JumpEffect(GameObject obj)
+    {
+        float originalY = obj.transform.position.y;
+        float jumpHeight = 1.0f; // Change this value to adjust jump height
+        float jumpDuration = 0.5f; // Change this value to adjust jump duration
+
+        float timeElapsed = 0;
+
+        while (timeElapsed < jumpDuration)
+        {
+            float newY = originalY + Mathf.Sin(Mathf.PI * (timeElapsed / jumpDuration)) * jumpHeight;
+            obj.transform.position = new Vector3(obj.transform.position.x, newY, obj.transform.position.z);
+
+            timeElapsed += Time.deltaTime;
+            yield return null;
+        }
+
+        obj.transform.position = new Vector3(obj.transform.position.x, originalY, obj.transform.position.z);
+    }
+
     IEnumerator paulMovement()
     {
         yield return new WaitForSeconds(5f);
@@ -77,6 +101,7 @@ public class PaulAI : MonoBehaviour
                 paulphase5.gameObject.SetActive(true);
                 yield return new WaitForSeconds(0.1f);
                 staticcam8.SetActive(false);
+                StartCoroutine(JumpEffect(paulphase5.gameObject));
             }
             else if (currentlocation == "paulphase5")
             {
@@ -89,7 +114,6 @@ public class PaulAI : MonoBehaviour
         }
         StartCoroutine(paulMovement());
     }
-
 
     public void callpaul()
     {
