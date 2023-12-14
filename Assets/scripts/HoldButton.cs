@@ -9,6 +9,7 @@ public class ButtonHoldRelease : MonoBehaviour, IPointerDownHandler, IPointerUpH
 
 
     public event Action WifiFixed;
+    public AudioSource rebootsound;
 
     bool isPressed = false;
 
@@ -28,6 +29,7 @@ public class ButtonHoldRelease : MonoBehaviour, IPointerDownHandler, IPointerUpH
         Debug.Log("Button Hold Down");
         isPressed = true;
         wifidown.sprite = bluereboot;
+        rebootsound.Play();
     }
 
     public void OnPointerUp(PointerEventData eventData)
@@ -36,6 +38,7 @@ public class ButtonHoldRelease : MonoBehaviour, IPointerDownHandler, IPointerUpH
         isPressed = false;
         timer = 0;
         wifidown.sprite = redwifi;
+        rebootsound.Stop();
     }
 
     private void Update()
