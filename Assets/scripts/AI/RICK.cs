@@ -28,6 +28,9 @@ public class RICK : MonoBehaviour
     private string currentlocation;
     public int ailevel;
 
+
+    public GameObject shitdatindewegzit;
+
     public AudioSource RickWegVanDeur;
     public Canvas deurui;
     public GameObject doorcam;
@@ -124,14 +127,16 @@ public class RICK : MonoBehaviour
             else
             {
                 rickcam1.gameObject.SetActive(false);
+                shitdatindewegzit.SetActive(false);
                 currentlocation = "office";
                 rickoffice.gameObject.SetActive(true);
                 camerahandler.GetComponent<Cameras>().SwitchToCamDown(true);
                 camerahandler.GetComponent<Cameras>().BackToTheOffice(true);
                 rickjumpscaresound.Play();
+                rickoffice.gameObject.GetComponent<animplayer>().Func_PlayUIAnim();
 
-                // Wait for a few seconds after the jumpscare before changing the scene
-                yield return new WaitForSeconds(3f); // Change 3f to your desired delay
+                yield return new WaitForSeconds(0.5f);
+                // Wait for a few seconds after the jumpscare before changing the scene // Change 3f to your desired delay
 
                 // Load the next scene
                 SceneManager.LoadScene("GameOver"); // Replace "YourNextScene" with your scene name

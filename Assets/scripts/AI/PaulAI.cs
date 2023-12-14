@@ -2,11 +2,13 @@ using JetBrains.Annotations;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 using UnityEngine.UI;
 
 public class PaulAI : MonoBehaviour
 {
     public GameObject paulscare;
+    public GameObject paulscare2;
     public GameObject paulphase5;
     public GameObject paulphase4;
     public GameObject paulphase3;
@@ -175,33 +177,64 @@ public class PaulAI : MonoBehaviour
         }
         else
         {
-            string previousloc = currentlocation;
-            currentlocation = "pauldown";
-            paulphase1.SetActive(false);
-            paulphase2.SetActive(false);
-            paulphase3.SetActive(false);
-            paulscare.SetActive(true);
-            yield return new WaitForSeconds(poephoofd.clip.length);
-            angry.Play();
-            paulscare.transform.localScale = new Vector3(0.2f, 0.2f, 0.2f);
-            yield return new WaitForSeconds(0.1f);
-            paulscare.transform.localScale = new Vector3(0.4f, 0.4f, 0.4f);
-            yield return new WaitForSeconds(0.1f);
-            paulscare.transform.localScale = new Vector3(0.8f, 0.8f, 0.8f);
-            yield return new WaitForSeconds(0.1f);
-            paulscare.transform.localScale = new Vector3(1.4f, 1.4f, 1.4f);
-            yield return new WaitForSeconds(0.1f);
-            paulscare.transform.localScale = new Vector3(2.0f, 2.0f, 2.0f);
-            yield return new WaitForSeconds(0.1f);
-            paulscare.transform.localScale = new Vector3(2.5f, 2.5f, 2.5f);
-            yield return new WaitForSeconds(0.1f);
-            paulscare.transform.localScale = new Vector3(3f, 3f, 3f);
-            yield return new WaitForSeconds(0.1f);
-            break1.Play();
-            break2.Play();
+            if (cambrokenui.activeSelf)
+            {
+                camerahandler.GetComponent<Cameras>().SwitchToCamDown(true);
+                camerahandler.GetComponent<Cameras>().BackToTheOffice(true);
+                currentlocation = "pauldown";
+                paulphase1.SetActive(false);
+                paulphase2.SetActive(false);
+                paulphase3.SetActive(false);
+                paulscare2.SetActive(true);
+                yield return new WaitForSeconds(poephoofd.clip.length);
+                angry.Play();
+                paulscare2.transform.localScale = new Vector3(0.2f, 0.2f, 0.2f);
+                yield return new WaitForSeconds(0.1f);
+                paulscare2.transform.localScale = new Vector3(0.4f, 0.4f, 0.4f);
+                yield return new WaitForSeconds(0.1f);
+                paulscare2.transform.localScale = new Vector3(0.8f, 0.8f, 0.8f);
+                yield return new WaitForSeconds(0.1f);
+                paulscare2.transform.localScale = new Vector3(1.4f, 1.4f, 1.4f);
+                yield return new WaitForSeconds(0.1f);
+                paulscare2.transform.localScale = new Vector3(2.0f, 2.0f, 2.0f);
+                yield return new WaitForSeconds(0.1f);
+                paulscare2.transform.localScale = new Vector3(2.5f, 2.5f, 2.5f);
+                yield return new WaitForSeconds(0.1f);
+                paulscare2.transform.localScale = new Vector3(3f, 3f, 3f);
+                yield return new WaitForSeconds(0.1f);
+                break1.Play();
+                break2.Play();
+                SceneManager.LoadScene("GameOver");
 
-            cambrokenui.SetActive(true);
-            currentlocation = previousloc;
+            }
+            else {
+                string previousloc = currentlocation;
+                currentlocation = "pauldown";
+                paulphase1.SetActive(false);
+                paulphase2.SetActive(false);
+                paulphase3.SetActive(false);
+                paulscare.SetActive(true);
+                yield return new WaitForSeconds(poephoofd.clip.length);
+                angry.Play();
+                paulscare.transform.localScale = new Vector3(0.2f, 0.2f, 0.2f);
+                yield return new WaitForSeconds(0.1f);
+                paulscare.transform.localScale = new Vector3(0.4f, 0.4f, 0.4f);
+                yield return new WaitForSeconds(0.1f);
+                paulscare.transform.localScale = new Vector3(0.8f, 0.8f, 0.8f);
+                yield return new WaitForSeconds(0.1f);
+                paulscare.transform.localScale = new Vector3(1.4f, 1.4f, 1.4f);
+                yield return new WaitForSeconds(0.1f);
+                paulscare.transform.localScale = new Vector3(2.0f, 2.0f, 2.0f);
+                yield return new WaitForSeconds(0.1f);
+                paulscare.transform.localScale = new Vector3(2.5f, 2.5f, 2.5f);
+                yield return new WaitForSeconds(0.1f);
+                paulscare.transform.localScale = new Vector3(3f, 3f, 3f);
+                yield return new WaitForSeconds(0.1f);
+                break1.Play();
+                break2.Play();
+
+                cambrokenui.SetActive(true);
+                currentlocation = previousloc; }
 
         }
         yield return new WaitForSeconds(10f);
