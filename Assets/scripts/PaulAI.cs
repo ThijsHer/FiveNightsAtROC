@@ -1,6 +1,8 @@
+using JetBrains.Annotations;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class PaulAI : MonoBehaviour
 {
@@ -23,12 +25,25 @@ public class PaulAI : MonoBehaviour
     public GameObject staticcam8;
     public GameObject cambrokenui;
     public GameObject wifilogo;
+    public GameObject rebootbtn;
+
+    [SerializeField]
+    private ButtonHoldRelease camResetBtn;
 
     private string currentlocation;
     public int ailevel;
 
     public GameObject camerahandler;
     public GameObject cambutton;
+
+    private Coroutine coroutine;
+
+    private void Awake()
+    {
+        camResetBtn.WifiFixed += ResetCam;
+
+    }
+
     void Start()
     {
         currentlocation = "paulphase1";
@@ -126,6 +141,9 @@ public class PaulAI : MonoBehaviour
                 wifi.Play();
                 currentlocation = "pauldown";
                 wifilogo.gameObject.SetActive(true);
+                wifilogo.GetComponent<logoflicker>().start();
+                yield return new WaitForSeconds(2f);
+                rebootbtn.gameObject.SetActive(true);
             }
         }
 
@@ -187,6 +205,19 @@ public class PaulAI : MonoBehaviour
         }
         yield return new WaitForSeconds(10f);
         audiolure.SetActive(true);
+    }
+
+    /// <summary>
+    /// 
+    /// </summary>
+    private void ResetCam()
+    {
+        cambutton.SetActive(true);
+        wifilogo.gameObject.SetActive(false);
+        currentlocation = "paulphase1";
+        paulphase1.gameObject.SetActive(true);
+        paulphase5.gameObject.SetActive(false);
+        wifilogo.GetComponent<logoflicker>().stop();
     }
 }
 
