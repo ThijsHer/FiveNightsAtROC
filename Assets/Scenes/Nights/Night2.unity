@@ -515,7 +515,7 @@ MonoBehaviour:
   staticcam4: {fileID: 786424821}
   staticcam3: {fileID: 1466722128}
   staticcam1: {fileID: 446268888}
-  rickoffice: {fileID: 0}
+  rickoffice: {fileID: 1986122863}
   camerahandler: {fileID: 313862734}
   rickjumpscaresound: {fileID: 2047801770}
   ailevel: 4
