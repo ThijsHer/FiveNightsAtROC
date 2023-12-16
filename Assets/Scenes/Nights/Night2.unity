@@ -1370,7 +1370,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 182327853}
-  - component: {fileID: 182327852}
+  - component: {fileID: 182327854}
   m_Layer: 0
   m_Name: TimeManager
   m_TagString: Untagged
@@ -1378,23 +1378,6 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!114 &182327852
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 182327851}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: d8721eac752966a4a94b44cf848cfc9d, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  gameDurationInSeconds: 360
-  timeScale: 1
-  textObject: {fileID: 1890155615}
-  rickAI: {fileID: 70329117}
-  korsAI: {fileID: 529646280}
 --- !u!4 &182327853
 Transform:
   m_ObjectHideFlags: 0
@@ -1410,6 +1393,24 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &182327854
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 182327851}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 99d5af2533c05b94f9785da3c8e26d67, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  gameDurationInSeconds: 400
+  timeScale: 1
+  textObject: {fileID: 1890155615}
+  rickAI: {fileID: 70329117}
+  korsAI: {fileID: 529646280}
+  PaulAI: {fileID: 132150362}
 --- !u!1 &191298231
 GameObject:
   m_ObjectHideFlags: 0
@@ -14998,6 +14999,7 @@ AudioSource:
 SceneRoots:
   m_ObjectHideFlags: 0
   m_Roots:
+  - {fileID: 182327853}
   - {fileID: 568589449}
   - {fileID: 1863663887}
   - {fileID: 1531916363}
@@ -15007,7 +15009,6 @@ SceneRoots:
   - {fileID: 1318018096}
   - {fileID: 579661977}
   - {fileID: 1219962463}
-  - {fileID: 182327853}
   - {fileID: 529646281}
   - {fileID: 313862737}
   - {fileID: 70329118}
