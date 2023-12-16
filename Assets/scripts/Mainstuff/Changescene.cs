@@ -6,10 +6,13 @@ using UnityEngine.SceneManagement;
 public class Changescene : MonoBehaviour
 {
     public float timer = 0;
+    public AudioSource clip;
+    private string currentnight;
     // Start is called before the first frame update
     void Start()
     {
-       StartCoroutine(changesceneLoad());
+        currentnight = PlayerPrefs.GetString("currentnight", "Night 1");
+        StartCoroutine(changesceneLoad());
     }
 
 
@@ -17,9 +20,28 @@ public class Changescene : MonoBehaviour
     // Update is called once per frame
     IEnumerator changesceneLoad()
     {
-        yield return new WaitForSeconds(4f);
-        SceneManager.LoadScene("Night1");
+        yield return new WaitForSeconds(clip.clip.length);
+        if (currentnight == "Night 1")
+        {
+            SceneManager.LoadScene("Night1");
+        }
+        else if (currentnight == "Night 2")
+        {
+            SceneManager.LoadScene("Night2");
+        }
 
+    }
+
+    public void skiptonight()
+    {
+        if (currentnight == "Night 1")
+        {
+            SceneManager.LoadScene("Night1");
+        }
+        else if (currentnight == "Night 2")
+        {
+            SceneManager.LoadScene("Night2");
+        }
     }
 
 

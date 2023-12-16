@@ -7,6 +7,7 @@ public class Win : MonoBehaviour
 {
     // Start is called before the first frame update
     public float timer = 0;
+    public AudioSource clip;
     // Start is called before the first frame update
     void Start()
     {
@@ -18,8 +19,13 @@ public class Win : MonoBehaviour
     // Update is called once per frame
     IEnumerator changesceneLoad()
     {
-        yield return new WaitForSeconds(4f);
+        yield return new WaitForSeconds(clip.clip.length);
         SceneManager.LoadScene("Mainmenu");
 
+    }
+
+    public void skipbacktomenu()
+    {
+        SceneManager.LoadScene("Mainmenu");
     }
 }

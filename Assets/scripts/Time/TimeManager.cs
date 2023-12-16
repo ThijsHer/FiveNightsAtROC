@@ -59,7 +59,7 @@ public class TimeManager : MonoBehaviour
 
         if (currentHour == 0)
         {
-            rickAI.ailevel = 20;
+            rickAI.ailevel = 0;
             korsAI.currentAILevel = 1;
         }
         else if (currentHour == 1)
@@ -92,6 +92,7 @@ public class TimeManager : MonoBehaviour
 
     void EndGame()
     {
+        PlayerPrefs.SetString("currentnight", "Night 2");
         gameEnded = true;
         timerText.text = "6 AM";
         SceneManager.LoadScene("6AM");
