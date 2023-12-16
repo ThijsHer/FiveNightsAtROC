@@ -18,7 +18,7 @@ public class Lose : MonoBehaviour
     // Update is called once per frame
     IEnumerator changesceneLoad()
     {
-        yield return new WaitForSeconds(5f);
+        yield return new WaitForSeconds(4f);
         SceneManager.LoadScene("Mainmenu");
 
     }
