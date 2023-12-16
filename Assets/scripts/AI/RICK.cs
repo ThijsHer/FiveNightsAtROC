@@ -36,6 +36,7 @@ public class RICK : MonoBehaviour
     public GameObject doorcam;
     public Button backtoofficebutton;
 
+    public AudioSource[] audioClips;
     void Start()
     {
         currentlocation = "cam7";
@@ -119,7 +120,15 @@ public class RICK : MonoBehaviour
                 rickcam1.gameObject.SetActive(false);
                 currentlocation = "cam7";
                 rickcam7.gameObject.SetActive(true);
+
+                // Randomly select an audio clip
+                int randomIndex = UnityEngine.Random.Range(0, audioClips.Length);
+                AudioSource selectedAudio = audioClips[randomIndex];
+
+                // Play the selected audio clip
+                selectedAudio.Play();
                 RickWegVanDeur.Play();
+
                 yield return new WaitForSeconds(0.1f);
                 staticcam7.SetActive(false);
                 staticcam1.SetActive(false);

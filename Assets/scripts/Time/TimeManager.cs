@@ -64,7 +64,7 @@ public class TimeManager : MonoBehaviour
         }
         else if (currentHour == 1)
         {
-            rickAI.ailevel = 3;
+            rickAI.ailevel = 1;
             korsAI.currentAILevel = 2;
            
         }
