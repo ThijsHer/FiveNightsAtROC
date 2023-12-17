@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class quitgame : MonoBehaviour
 {
@@ -20,4 +21,12 @@ public class quitgame : MonoBehaviour
     {
         Application.Quit();
     }
+
+    public void resetgame()
+    {
+        PlayerPrefs.DeleteAll();
+        SceneManager.LoadScene("Mainmenu");
+    } 
+
+
 }
