@@ -38,6 +38,9 @@ public class Cameras : MonoBehaviour
     AudioSource camOpener;
     public Animator deurdichtanim;
 
+
+    public GameObject staticcam9;
+    public GameObject staticcam8;
     public GameObject staticcam7;
     public GameObject staticcam6;
     public GameObject staticcam5;
@@ -228,11 +231,17 @@ public class Cameras : MonoBehaviour
         {
             Cam8.gameObject.SetActive(true);
             Button8.interactable = false;
+            staticcam8.SetActive(true);
+            yield return new WaitForSeconds(0.1f);
+            staticcam8.SetActive(false);
         }
         else if (SelectedCam == 9)
         {
             Cam9.gameObject.SetActive(true);
             Button9.interactable = false;
+            staticcam9.SetActive(true);
+            yield return new WaitForSeconds(0.1f);
+            staticcam9.SetActive(false);
         }
     }
 

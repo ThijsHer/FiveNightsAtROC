@@ -29,6 +29,7 @@ public class ButtonHoldRelease : MonoBehaviour, IPointerDownHandler, IPointerUpH
         Debug.Log("Button Hold Down");
         isPressed = true;
         wifidown.sprite = bluereboot;
+        wifidown.gameObject.GetComponent<AudioSource>().enabled = false;
         rebootsound.Play();
     }
 
@@ -38,6 +39,7 @@ public class ButtonHoldRelease : MonoBehaviour, IPointerDownHandler, IPointerUpH
         isPressed = false;
         timer = 0;
         wifidown.sprite = redwifi;
+        wifidown.gameObject.GetComponent<AudioSource>().enabled = true;
         rebootsound.Stop();
     }
 
@@ -54,6 +56,7 @@ public class ButtonHoldRelease : MonoBehaviour, IPointerDownHandler, IPointerUpH
                 isPressed = false;
                 timer = 0;
                 this.gameObject.SetActive(false);
+                wifidown.gameObject.GetComponent<AudioSource>().enabled = true;
                 wifidown.sprite = redwifi;
             }
         }

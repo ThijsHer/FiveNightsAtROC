@@ -43,17 +43,20 @@ public class PauseMenu : MonoBehaviour
     {
         pauseMenu.SetActive(true);
         Time.timeScale = 0f;
+        AudioListener.pause = true;
         isPaused = true;
     }
     public void ResumeGame()
     {
         pauseMenu.SetActive(false);
         Time.timeScale = 1f;
+        AudioListener.pause = false;
         isPaused = false;
     }
     public void mainmenu()
     {
         Time.timeScale = 1f;
+        AudioListener.pause = false;
         SceneManager.LoadScene("Mainmenu");
     }
     public void quitGame()
