@@ -71,28 +71,28 @@ public class Night2Time : MonoBehaviour
             rickAI.ailevel = 2;
             korsAI.currentAILevel = 2;
             PaulAI.ailevel = 2;
-            PeterAI.ailevel= 1;
+            PeterAI.ailevel= 2;
         }
         else if(currentHour == 2)
         {
-            rickAI.ailevel = 3;
+            rickAI.ailevel = 2;
             korsAI.currentAILevel = 2;
             PaulAI.ailevel = 2;
-            PeterAI.ailevel = 1;
+            PeterAI.ailevel = 2;
         }
         else if (currentHour == 3)
         {
             rickAI.ailevel = 4;
             korsAI.currentAILevel = 2;
             PaulAI.ailevel = 2;
-            PeterAI.ailevel = 2;
+            PeterAI.ailevel = 3;
         }
         else if (currentHour == 4)
         {
-            rickAI.ailevel = 5;
+            rickAI.ailevel = 4;
             korsAI.currentAILevel = 2;
             PaulAI.ailevel = 3;
-            PeterAI.ailevel = 2;
+            PeterAI.ailevel = 3;
         }
         else if (currentHour == 5)
         {
