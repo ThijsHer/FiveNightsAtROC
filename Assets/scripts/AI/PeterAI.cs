@@ -159,26 +159,9 @@ public class PeterAI : MonoBehaviour
         {
 
 
-            yield return new WaitForSeconds(6f);
+            yield return new WaitForSeconds(8f);
 
-            if (!(currentlocation == "buiten"))
-            {
-                rocitstatic.SetActive(true);
-                currentlocation = "stage1";
-                peterROCITstage1.gameObject.SetActive(true);
-
-                // Randomly select an audio clip
-                int randomIndex = UnityEngine.Random.Range(0, audioClips.Length);
-                AudioSource selectedAudio = audioClips[randomIndex];
-
-                // Play the selected audio clip
-                selectedAudio.Play();
-                PeterWegVanDeur.Play();
-
-                yield return new WaitForSeconds(0.1f);
-                rocitstatic.SetActive(false);
-            }
-            else
+            if (currentlocation == "buiten")
             {
                 shitdatindewegzit.SetActive(false);
                 currentlocation = "office";
@@ -203,11 +186,27 @@ public class PeterAI : MonoBehaviour
     {
         buttonunpressed.SetActive(false);
         pressbuttonsound.Play();
+        if (currentlocation == "buiten")
+        {
+            rocitstatic.SetActive(true);
+            currentlocation = "stage1";
+            peterROCITstage1.gameObject.SetActive(true);
+
+            // Randomly select an audio clip
+            int randomIndex = UnityEngine.Random.Range(0, audioClips.Length);
+            AudioSource selectedAudio = audioClips[randomIndex];
+
+            // Play the selected audio clip
+            selectedAudio.Play();
+
+            yield return new WaitForSeconds(0.1f);
+            rocitstatic.SetActive(false);
+        }
         buttonpressed.SetActive(true);
         yield return new WaitForSeconds(0.5f);
         shanksound.Play();
         spike.SetActive(true);
-        yield return new WaitForSeconds(10.5f);
+        yield return new WaitForSeconds(11.5f);
         spike.SetActive(false);
         buttonpressed.SetActive(false);
         buttonunpressed.SetActive(true);

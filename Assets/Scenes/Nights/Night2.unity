@@ -1630,6 +1630,7 @@ MonoBehaviour:
   rickAI: {fileID: 70329117}
   korsAI: {fileID: 540241718}
   PaulAI: {fileID: 132150362}
+  PeterAI: {fileID: 1238646176}
 --- !u!1 &191298231
 GameObject:
   m_ObjectHideFlags: 0

@@ -18,6 +18,7 @@ public class Night2Time : MonoBehaviour
     public RICK rickAI;
     public KorsAI korsAI;
     public PaulAI PaulAI;
+    public PeterAI PeterAI;
 
     void Start()
     {
@@ -60,39 +61,45 @@ public class Night2Time : MonoBehaviour
 
         if (currentHour == 0)
         {
-            rickAI.ailevel = 2;
-            korsAI.currentAILevel = 2;
+            rickAI.ailevel = 1;
+            korsAI.currentAILevel = 1;
             PaulAI.ailevel = 1;
+            PeterAI.ailevel = 0;
         }
         else if (currentHour == 1)
         {
-            rickAI.ailevel = 3;
+            rickAI.ailevel = 2;
             korsAI.currentAILevel = 2;
             PaulAI.ailevel = 2;
+            PeterAI.ailevel= 1;
         }
         else if(currentHour == 2)
         {
             rickAI.ailevel = 3;
             korsAI.currentAILevel = 2;
-            PaulAI.ailevel = 3;
+            PaulAI.ailevel = 2;
+            PeterAI.ailevel = 1;
         }
         else if (currentHour == 3)
         {
             rickAI.ailevel = 4;
             korsAI.currentAILevel = 2;
-            PaulAI.ailevel = 3;
+            PaulAI.ailevel = 2;
+            PeterAI.ailevel = 2;
         }
         else if (currentHour == 4)
         {
             rickAI.ailevel = 5;
             korsAI.currentAILevel = 2;
             PaulAI.ailevel = 3;
+            PeterAI.ailevel = 2;
         }
         else if (currentHour == 5)
         {
             rickAI.ailevel = 6;
             korsAI.currentAILevel = 2;
             PaulAI.ailevel = 3;
+            PeterAI.ailevel = 4;
         }
     }
 
