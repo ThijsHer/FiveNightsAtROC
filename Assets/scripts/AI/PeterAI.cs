@@ -39,6 +39,7 @@ public class PeterAI : MonoBehaviour
 
     public AudioSource pressbuttonsound;
     public AudioSource shanksound;
+    public AudioSource wallsound;
 
     void Start()
     {
@@ -198,6 +199,7 @@ public class PeterAI : MonoBehaviour
 
             // Play the selected audio clip
             selectedAudio.Play();
+            wallsound.Play();
 
             yield return new WaitForSeconds(0.1f);
             rocitstatic.SetActive(false);
