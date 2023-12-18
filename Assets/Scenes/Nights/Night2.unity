@@ -3744,7 +3744,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   startX: -2
-  endX: 4
+  endX: 1
   duration: 6
 --- !u!81 &405909666
 AudioListener:
