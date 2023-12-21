@@ -126,6 +126,11 @@ public class PeterAI : MonoBehaviour
                 currentlocation = "stage1";
                 peterROCITstage1.gameObject.SetActive(true);
 
+                int randomIndex = UnityEngine.Random.Range(0, audioClips.Length);
+                AudioSource selectedAudio = audioClips[randomIndex];
+
+                // Play the selected audio clip
+                selectedAudio.Play();
                 PeterWegVanDeur.Play();
 
                 yield return new WaitForSeconds(0.1f);
@@ -188,11 +193,6 @@ public class PeterAI : MonoBehaviour
             peterROCITstage1.gameObject.SetActive(true);
 
             // Randomly select an audio clip
-            int randomIndex = UnityEngine.Random.Range(0, audioClips.Length);
-            AudioSource selectedAudio = audioClips[randomIndex];
-
-            // Play the selected audio clip
-            selectedAudio.Play();
             wallsound.Play();
 
             yield return new WaitForSeconds(0.1f);
