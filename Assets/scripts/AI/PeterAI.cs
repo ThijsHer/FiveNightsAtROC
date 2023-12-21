@@ -10,9 +10,12 @@ public class PeterAI : MonoBehaviour
 
     public int ailevel;
 
+    private int hallwindow;
+
     public GameObject peterROCITstage1;
     public GameObject peterROCITstage2;
     public GameObject peterROCITstage3;
+    public GameObject peterROCITstage3V2;
     public GameObject petercam3;
     public GameObject petercam1;
 
@@ -75,20 +78,27 @@ public class PeterAI : MonoBehaviour
             }
             else if (currentlocation == "stage2")
             {
+                hallwindow = UnityEngine.Random.Range(1, 3);
                 rocitstatic.SetActive(true);
                 peterROCITstage2.gameObject.SetActive(false);
                 currentlocation = "stage3";
-                peterROCITstage3.gameObject.SetActive(true);
+                if (hallwindow == 1)
+                {
+                    peterROCITstage3V2.gameObject.SetActive(true);
+                }
+                else
+                {
+                    peterROCITstage3.gameObject.SetActive(true);
+                }
                 yield return new WaitForSeconds(0.1f);
                 rocitstatic.SetActive(false);
             }
             else if (currentlocation == "stage3")
             {
-                int hallwindow = UnityEngine.Random.Range(1, 3);
                 if (hallwindow == 1)
                 {
                     rocitstatic.SetActive(true);
-                    peterROCITstage3.gameObject.SetActive(false);
+                    peterROCITstage3V2.gameObject.SetActive(false);
                     currentlocation = "buiten";
                     yield return new WaitForSeconds(0.1f);
                     rocitstatic.SetActive(false);
