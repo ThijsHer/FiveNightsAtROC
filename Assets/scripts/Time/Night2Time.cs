@@ -64,7 +64,7 @@ public class Night2Time : MonoBehaviour
             rickAI.ailevel = 1;
             korsAI.currentAILevel = 1;
             PaulAI.ailevel = 1;
-            PeterAI.ailevel = 0;
+            PeterAI.ailevel = 20;
         }
         else if (currentHour == 1)
         {

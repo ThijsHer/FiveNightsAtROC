@@ -15,7 +15,10 @@ public class PeterAI : MonoBehaviour
     public GameObject peterROCITstage3;
     public GameObject petercam3;
     public GameObject petercam1;
+
     public GameObject officepeter;
+    public GameObject officeraam;
+    public AudioSource breakraam;
 
     public GameObject rocitstatic;
     public GameObject cam3static;
@@ -146,9 +149,9 @@ public class PeterAI : MonoBehaviour
                 camerahandler.GetComponent<Cameras>().SwitchToCamDown(true);
                 camerahandler.GetComponent<Cameras>().BackToTheOffice(true);
                 Peterjumpscaresound.Play();
-                //officepeter.gameObject.GetComponent<animplayer>().Func_PlayUIAnim();
+                officepeter.gameObject.GetComponent<animplayer>().Func_PlayUIAnim();
 
-                yield return new WaitForSeconds(0.5f);
+                yield return new WaitForSeconds(0.4f);
                 // Wait for a few seconds after the jumpscare before changing the scene // Change 3f to your desired delay
 
                 // Load the next scene
@@ -165,13 +168,14 @@ public class PeterAI : MonoBehaviour
             {
                 shitdatindewegzit.SetActive(false);
                 currentlocation = "office";
-                officepeter.gameObject.SetActive(true);
+                officeraam.gameObject.SetActive(true);
                 camerahandler.GetComponent<Cameras>().SwitchToCamDown(true);
                 camerahandler.GetComponent<Cameras>().BackToTheOffice(true);
                 Peterjumpscaresound.Play();
-                //officepeter.gameObject.GetComponent<animplayer>().Func_PlayUIAnim();
+                breakraam.Play();
+                officeraam.gameObject.GetComponent<animplayer>().Func_PlayUIAnim();
 
-                yield return new WaitForSeconds(0.5f);
+                yield return new WaitForSeconds(0.9f);
                 // Wait for a few seconds after the jumpscare before changing the scene // Change 3f to your desired delay
 
                 // Load the next scene
