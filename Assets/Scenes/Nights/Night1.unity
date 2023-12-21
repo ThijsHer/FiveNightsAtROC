@@ -1552,6 +1552,8 @@ MonoBehaviour:
   CamDownObject: {fileID: 350881670}
   DEURUI: {fileID: 18064989}
   deurdichtanim: {fileID: 1418556783}
+  staticcam9: {fileID: 0}
+  staticcam8: {fileID: 0}
   staticcam7: {fileID: 1729699695}
   staticcam6: {fileID: 2129965207}
   staticcam5: {fileID: 914921113}
@@ -7740,7 +7742,7 @@ AudioSource:
   m_Enabled: 1
   serializedVersion: 4
   OutputAudioMixerGroup: {fileID: 0}
-  m_audioClip: {fileID: 8300000, guid: d28a4ce155cb44a44a6a5fa39bcc3a0b, type: 3}
+  m_audioClip: {fileID: 8300000, guid: fb6436c86eef3fb4dbf0cecfe70e475a, type: 3}
   m_PlayOnAwake: 0
   m_Volume: 1
   m_Pitch: 1
@@ -9719,7 +9721,7 @@ AudioSource:
   m_Enabled: 1
   serializedVersion: 4
   OutputAudioMixerGroup: {fileID: 0}
-  m_audioClip: {fileID: 8300000, guid: 43af42f5fbf048f42913e53d8cd5da89, type: 3}
+  m_audioClip: {fileID: 8300000, guid: 5072af0da8c61754f838d10fee0a39a9, type: 3}
   m_PlayOnAwake: 0
   m_Volume: 1
   m_Pitch: 1
@@ -10797,7 +10799,7 @@ AudioSource:
   m_Enabled: 1
   serializedVersion: 4
   OutputAudioMixerGroup: {fileID: 0}
-  m_audioClip: {fileID: 8300000, guid: c21d185ec66f2ff4ba01f799d304b17c, type: 3}
+  m_audioClip: {fileID: 8300000, guid: f001d06f6ac95534da1a3e69b4dbb7d4, type: 3}
   m_PlayOnAwake: 0
   m_Volume: 1
   m_Pitch: 1
