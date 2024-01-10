@@ -15,7 +15,7 @@ public class secrettime : MonoBehaviour
     private int currentHour = 0; // Track the current in-game hour
     private bool gameEnded = false;
 
-    public RICK rickAI;
+    public Lethalcompany rickAI;
     public KorsAI korsAI;
     public PaulAI PaulAI;
     public PeterAI PeterAI;
