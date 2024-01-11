@@ -39,7 +39,7 @@ public class secret : MonoBehaviour
     {
         Debug.Log("Changing scene to 'secretnight'");
         // Replace "secretnight" with the actual name of your target scene
-        SceneManager.LoadScene("secretnight");
+        SceneManager.LoadScene("secretam");
     }
 }
 

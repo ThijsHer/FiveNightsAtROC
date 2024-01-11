@@ -69,23 +69,23 @@ public class secrettime : MonoBehaviour
         else if (currentHour == 1)
         {
             rickAI.ailevel = 1;
-            korsAI.currentAILevel = 2;
-            PaulAI.ailevel = 4;
+            korsAI.currentAILevel = 3;
+            PaulAI.ailevel = 6;
             PeterAI.ailevel= 1;
         }
         else if(currentHour == 2)
         {
-            rickAI.ailevel = 4;
+            rickAI.ailevel = 6;
             korsAI.currentAILevel = 2;
-            PaulAI.ailevel = 1;
+            PaulAI.ailevel = 3;
             PeterAI.ailevel = 4;
         }
         else if (currentHour == 3)
         {
-            rickAI.ailevel = 1;
+            rickAI.ailevel = 7;
             korsAI.currentAILevel = 2;
             PaulAI.ailevel = 5;
-            PeterAI.ailevel = 1;
+            PeterAI.ailevel = 2;
         }
         else if (currentHour == 4)
         {
@@ -97,9 +97,9 @@ public class secrettime : MonoBehaviour
         else if (currentHour == 5)
         {
             rickAI.ailevel = 8;
-            korsAI.currentAILevel = 1;
+            korsAI.currentAILevel = 2;
             PaulAI.ailevel = 4;
-            PeterAI.ailevel = 1;
+            PeterAI.ailevel = 3;
         }
     }
 

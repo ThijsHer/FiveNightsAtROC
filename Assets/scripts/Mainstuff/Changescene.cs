@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 
-public class Changescene : MonoBehaviour
+public class secretscene : MonoBehaviour
 {
     public float timer = 0;
     public AudioSource clip;
