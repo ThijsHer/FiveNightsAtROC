@@ -15,17 +15,17 @@ Game made by 4 developers in their freetime
 
 ### Installing
 
-* You can install the game on GameJolt
+* You can only receive the game by asking the developers.
 
 ## Authors
 
 Contributors names and contact info
 
-ex. Kayafr  (Developer)
+ex. KaiFr2  (Developer)
 ex. Smeikol (Developer)
 ex. Rick (Developer)
 ex. ThijsHerder (Idea) (Developer)
 
 ## License
 
-This project is licensed under the [ROCMN] License - see the LICENSE.md file for details
+This project is licensed under the [ROCMN] License
