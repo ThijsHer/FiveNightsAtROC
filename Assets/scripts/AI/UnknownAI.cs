@@ -46,7 +46,7 @@ public class UnknownAI : MonoBehaviour
 
         if (currentlocation == "scriptedwait")
         {
-            yield return new WaitForSeconds(1f);
+            yield return new WaitForSeconds(200f);
             wait.gameObject.SetActive(false);
             currentlocation = "hidden";
             Hidden.gameObject.SetActive(true);

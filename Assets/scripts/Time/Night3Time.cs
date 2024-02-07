@@ -19,6 +19,8 @@ public class Night3Time : MonoBehaviour
     public KorsAI korsAI;
     public PaulAI PaulAI;
     public PeterAI PeterAI;
+    public UnknownAI UnknownAI;
+
 
     void Start()
     {
@@ -65,6 +67,7 @@ public class Night3Time : MonoBehaviour
             korsAI.currentAILevel = 1;
             PaulAI.ailevel = 1;
             PeterAI.ailevel = 0;
+            UnknownAI.ailevel = 3;
         }
         else if (currentHour == 1)
         {
@@ -72,6 +75,7 @@ public class Night3Time : MonoBehaviour
             korsAI.currentAILevel = 2;
             PaulAI.ailevel = 2;
             PeterAI.ailevel= 2;
+            UnknownAI.ailevel = 5;
         }
         else if(currentHour == 2)
         {
@@ -79,6 +83,8 @@ public class Night3Time : MonoBehaviour
             korsAI.currentAILevel = 2;
             PaulAI.ailevel = 2;
             PeterAI.ailevel = 2;
+            UnknownAI.ailevel = 5;
+
         }
         else if (currentHour == 3)
         {
@@ -86,6 +92,8 @@ public class Night3Time : MonoBehaviour
             korsAI.currentAILevel = 2;
             PaulAI.ailevel = 2;
             PeterAI.ailevel = 3;
+            UnknownAI.ailevel = 5;
+
         }
         else if (currentHour == 4)
         {
@@ -93,6 +101,8 @@ public class Night3Time : MonoBehaviour
             korsAI.currentAILevel = 2;
             PaulAI.ailevel = 3;
             PeterAI.ailevel = 3;
+            UnknownAI.ailevel = 7;
+
         }
         else if (currentHour == 5)
         {
@@ -100,6 +110,8 @@ public class Night3Time : MonoBehaviour
             korsAI.currentAILevel = 2;
             PaulAI.ailevel = 3;
             PeterAI.ailevel = 4;
+            UnknownAI.ailevel = 6;
+
         }
     }
 
