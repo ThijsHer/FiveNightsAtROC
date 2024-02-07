@@ -15,16 +15,6 @@ public class ImageMovement : MonoBehaviour
         ActivateBusyImages(true);
     }
 
-    IEnumerator SwitchImages()
-    {
-        // Wacht voor de opgegeven vertraging
-        yield return new WaitForSeconds(switchDelay);
-
-        // Deactiveer de busy images en activeer de to-do images
-        ActivateToDoImages(true);
-        ActivateBusyImages(false);
-    }
-
     IEnumerator RandomizeBusyToToDo(GameObject busyImage)
     {
         // Willekeurige vertraging tussen 5 en 15 seconden
@@ -60,8 +50,7 @@ public class ImageMovement : MonoBehaviour
         // Activeer/deactiveer de busy image components
         foreach (GameObject image in busyImages)
         {
-            image.SetActive(activate);
-
+ 
             // Als we de busy images activeren, start dan de coroutine voor één van de objecten
             if (activate)
             {
