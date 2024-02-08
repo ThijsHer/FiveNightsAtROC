@@ -47,7 +47,7 @@ public class UnknownAI : MonoBehaviour
 
         if (currentlocation == "scriptedwait")
         {
-            yield return new WaitForSeconds(200f);
+            yield return new WaitForSeconds(150f);
             wait.gameObject.SetActive(false);
             currentlocation = "hidden";
             Hidden.gameObject.SetActive(true);
@@ -76,7 +76,7 @@ public class UnknownAI : MonoBehaviour
                     cam2static.SetActive(false);
                     cam1static.SetActive(false);
                 }
-                else if (currentlocation == "cam1")
+                if (currentlocation == "cam1")
                 {
                     yield return new WaitForSeconds(6f);
                     if (doorcam.activeSelf && !(backtoofficebutton.IsActive()))

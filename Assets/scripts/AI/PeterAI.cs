@@ -63,7 +63,6 @@ public class PeterAI : MonoBehaviour
         yield return new WaitForSeconds(5f);
 
         int chance = UnityEngine.Random.Range(1, 21);
-        Debug.Log(chance);
 
         if (chance <= ailevel)
         {

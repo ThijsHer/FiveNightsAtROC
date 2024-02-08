@@ -75,7 +75,7 @@ public class Night3Time : MonoBehaviour
             korsAI.currentAILevel = 2;
             PaulAI.ailevel = 2;
             PeterAI.ailevel= 1;
-            UnknownAI.ailevel = 5;
+            UnknownAI.ailevel = 3;
         }
         else if(currentHour == 2)
         {
@@ -83,7 +83,7 @@ public class Night3Time : MonoBehaviour
             korsAI.currentAILevel = 2;
             PaulAI.ailevel = 5;
             PeterAI.ailevel = 1;
-            UnknownAI.ailevel = 5;
+            UnknownAI.ailevel = 3;
 
         }
         else if (currentHour == 3)
@@ -92,7 +92,7 @@ public class Night3Time : MonoBehaviour
             korsAI.currentAILevel = 2;
             PaulAI.ailevel = 5;
             PeterAI.ailevel = 2;
-            UnknownAI.ailevel = 5;
+            UnknownAI.ailevel = 4;
 
         }
         else if (currentHour == 4)
@@ -101,7 +101,7 @@ public class Night3Time : MonoBehaviour
             korsAI.currentAILevel = 2;
             PaulAI.ailevel = 5;
             PeterAI.ailevel = 2;
-            UnknownAI.ailevel = 7;
+            UnknownAI.ailevel = 4;
 
         }
         else if (currentHour == 5)
