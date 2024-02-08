@@ -42,6 +42,10 @@ public class secretscene : MonoBehaviour
         {
             SceneManager.LoadScene("Night2");
         }
+        else if (currentnight == "Night 3")
+        {
+            SceneManager.LoadScene("Night3");
+        }
     }
 
 
