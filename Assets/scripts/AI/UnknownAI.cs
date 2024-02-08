@@ -25,6 +25,7 @@ public class UnknownAI : MonoBehaviour
     public GameObject shitdatindewegzit;
 
     public AudioSource gonegeluid;
+    public AudioSource glitchgeluid;
     public Canvas deurui;
     public GameObject doorcam;
     public Button backtoofficebutton;
@@ -77,11 +78,12 @@ public class UnknownAI : MonoBehaviour
                 }
                 else if (currentlocation == "cam1")
                 {
-                    yield return new WaitForSeconds(8f);
+                    yield return new WaitForSeconds(6f);
                     if (doorcam.activeSelf && !(backtoofficebutton.IsActive()))
                     {
                         Cam1.gameObject.SetActive(false);
                         currentlocation = "hidden";
+                        glitchgeluid.Play();
                         gonegeluid.Play();
                         Hidden.gameObject.SetActive(true);
                     }

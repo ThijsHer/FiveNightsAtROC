@@ -1553,7 +1553,7 @@ MonoBehaviour:
   DEURUI: {fileID: 18064989}
   deurdichtanim: {fileID: 1418556783}
   staticcam9: {fileID: 0}
-  staticcam8: {fileID: 0}
+  staticcam8: {fileID: 1729699695}
   staticcam7: {fileID: 1729699695}
   staticcam6: {fileID: 2129965207}
   staticcam5: {fileID: 914921113}
@@ -3815,7 +3815,7 @@ AudioSource:
   m_Enabled: 1
   serializedVersion: 4
   OutputAudioMixerGroup: {fileID: 0}
-  m_audioClip: {fileID: 8300000, guid: 9a09b17a3b6e91d43968d271fcc2a12e, type: 3}
+  m_audioClip: {fileID: 8300000, guid: c46c813975630124db7cdbdc574c5e47, type: 3}
   m_PlayOnAwake: 0
   m_Volume: 1
   m_Pitch: 1
@@ -10224,7 +10224,7 @@ RectTransform:
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
   m_AnchoredPosition: {x: 577, y: -387}
-  m_SizeDelta: {x: 497.54, y: 50}
+  m_SizeDelta: {x: 705.18, y: 50}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1721108115
 MonoBehaviour:
@@ -10246,9 +10246,10 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: '                       /\
+  m_text: '                                 /\
 
-    Click here to pickup the phone
+    Click here ONCE to pickup the
+    phone
 
 '
   m_isRightToLeft: 0
