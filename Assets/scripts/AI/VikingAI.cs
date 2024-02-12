@@ -41,6 +41,7 @@ public class VikingAI : MonoBehaviour
         yield return new WaitForSeconds(5f);
 
         int chance = Random.Range(1, 21);
+        Debug.Log(chance);
 
         if (chance <= aiLevel)
         {
@@ -87,8 +88,8 @@ public class VikingAI : MonoBehaviour
                     SceneManager.LoadScene("GameOver");
                 }
             }
-            StartCoroutine(VikingMove());
         }
+        StartCoroutine(VikingMove());
     }
 
     IEnumerator ThrowSnowball(GameObject snowball, GameObject splatter)

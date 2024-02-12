@@ -67,7 +67,7 @@ public class Night4Time : MonoBehaviour
             korsAI.currentAILevel = 1;
             PaulAI.ailevel = 1;
             PeterAI.ailevel = 0;
-            VikingAI.aiLevel = 20;
+            VikingAI.aiLevel = 1;
         }
         else if (currentHour == 1)
         {
@@ -75,7 +75,7 @@ public class Night4Time : MonoBehaviour
             korsAI.currentAILevel = 2;
             PaulAI.ailevel = 2;
             PeterAI.ailevel= 1;
-            VikingAI.aiLevel = 20;
+            VikingAI.aiLevel = 3;
 
         }
         else if(currentHour == 2)
@@ -84,7 +84,7 @@ public class Night4Time : MonoBehaviour
             korsAI.currentAILevel = 2;
             PaulAI.ailevel = 5;
             PeterAI.ailevel = 1;
-            VikingAI.aiLevel = 20;
+            VikingAI.aiLevel = 8;
 
 
         }
@@ -94,7 +94,7 @@ public class Night4Time : MonoBehaviour
             korsAI.currentAILevel = 2;
             PaulAI.ailevel = 5;
             PeterAI.ailevel = 2;
-            VikingAI.aiLevel = 20;
+            VikingAI.aiLevel = 8;
 
 
         }
@@ -104,7 +104,7 @@ public class Night4Time : MonoBehaviour
             korsAI.currentAILevel = 2;
             PaulAI.ailevel = 5;
             PeterAI.ailevel = 2;
-            VikingAI.aiLevel = 20;
+            VikingAI.aiLevel = 6;
 
 
         }
@@ -114,7 +114,7 @@ public class Night4Time : MonoBehaviour
             korsAI.currentAILevel = 2;
             PaulAI.ailevel = 5;
             PeterAI.ailevel = 2;
-            VikingAI.aiLevel = 20;
+            VikingAI.aiLevel = 6;
 
         }
     }
