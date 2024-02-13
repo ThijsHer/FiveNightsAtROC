@@ -8,20 +8,32 @@ public class VikingAI : MonoBehaviour
     private string currentLocation;
 
     public int aiLevel;
+
+    private int randomroom;
+
     public GameObject jumpscareObject;
     public GameObject stage1;
     public GameObject stage2;
     public GameObject stage3;
     public GameObject stage4;
     public GameObject stage5;
+    public GameObject rocit;
+    public GameObject serverroom;
     public GameObject snowballStage1;
     public GameObject snowballStage2;
     public GameObject snowballStage3;
     public GameObject snowballStage4;
+    public GameObject snowballrocit;
+    public GameObject snowballserverroom;
+
+
     public GameObject snowballSplatterStage1;
     public GameObject snowballSplatterStage2;
     public GameObject snowballSplatterStage3;
     public GameObject snowballSplatterStage4;
+    public GameObject snowballSplatterrocit;
+    public GameObject snowballSplatterserverroom;
+
     public float throwDuration = 1.5f;
     public float splatterDuration = 12f;
 
@@ -47,6 +59,7 @@ public class VikingAI : MonoBehaviour
         {
             if (currentLocation == "stage1")
             {
+                randomroom = UnityEngine.Random.Range(1, 3);
                 StartCoroutine(ThrowSnowball(snowballStage1, snowballSplatterStage1));
                 stage1.SetActive(false);
                 currentLocation = "stage2";
@@ -54,17 +67,52 @@ public class VikingAI : MonoBehaviour
             }
             else if (currentLocation == "stage2")
             {
-                StartCoroutine(ThrowSnowball(snowballStage2, snowballSplatterStage2));
-                stage2.SetActive(false);
-                currentLocation = "stage3";
-                stage3.SetActive(true);
+                if (randomroom == 2)
+                {
+                    currentLocation = "rocit";
+                    StartCoroutine(ThrowSnowball(snowballStage2, snowballSplatterStage2));
+                    stage2.gameObject.SetActive(false);
+                    rocit.gameObject.SetActive(true);
+                }
+                else
+                {
+                    randomroom = UnityEngine.Random.Range(1, 3);
+                    StartCoroutine(ThrowSnowball(snowballStage2, snowballSplatterStage2));
+                    stage2.SetActive(false);
+                    currentLocation = "stage3";
+                    stage3.SetActive(true);
+                }
+            }
+            else if (currentLocation == "rocit")
+            {
+                StartCoroutine(ThrowSnowball(snowballrocit, snowballSplatterrocit));
+                currentLocation = "stage3"; // This seems to be a typo, should be "stage3" without space
+                rocit.gameObject.SetActive(false);
+                stage3.gameObject.SetActive(true);
             }
             else if (currentLocation == "stage3")
             {
-                StartCoroutine(ThrowSnowball(snowballStage3, snowballSplatterStage3));
-                stage3.SetActive(false);
-                currentLocation = "stage4";
-                stage4.SetActive(true);
+                if (randomroom == 1)
+                {
+                    StartCoroutine(ThrowSnowball(snowballStage3, snowballSplatterStage3));
+                    currentLocation = "serverroom";
+                    stage3.gameObject.SetActive(false);
+                    serverroom.SetActive(true);
+                }
+                else
+                {
+                    StartCoroutine(ThrowSnowball(snowballStage3, snowballSplatterStage3));
+                    stage3.SetActive(false);
+                    currentLocation = "stage4";
+                    stage4.SetActive(true);
+                }
+            }
+            else if (currentLocation == "serverroom")
+            {
+                StartCoroutine(ThrowSnowball(snowballserverroom, snowballSplatterserverroom));
+                currentLocation = "stage4"; // Assuming the next stage is stage4
+                serverroom.SetActive(false); // Use SetActive instead of gameObject.SetActive
+                stage4.SetActive(true); // Use SetActive instead of gameObject.SetActive
             }
             else if (currentLocation == "stage4")
             {
@@ -78,7 +126,9 @@ public class VikingAI : MonoBehaviour
                 yield return new WaitForSeconds(8f);
                 if (doorCam.activeSelf && !backToOfficeButton.IsActive())
                 {
-                    // Handle if door cam is active and back to office button is not active
+                    currentLocation = "stage1";
+                    stage1.gameObject.SetActive(true);
+                    stage5.gameObject.SetActive(false);
                 }
                 else
                 {

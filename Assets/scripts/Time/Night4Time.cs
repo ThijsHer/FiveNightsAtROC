@@ -67,7 +67,7 @@ public class Night4Time : MonoBehaviour
             korsAI.currentAILevel = 1;
             PaulAI.ailevel = 1;
             PeterAI.ailevel = 0;
-            VikingAI.aiLevel = 1;
+            VikingAI.aiLevel = 20;
         }
         else if (currentHour == 1)
         {
@@ -75,7 +75,7 @@ public class Night4Time : MonoBehaviour
             korsAI.currentAILevel = 2;
             PaulAI.ailevel = 2;
             PeterAI.ailevel= 1;
-            VikingAI.aiLevel = 3;
+            VikingAI.aiLevel = 20;
 
         }
         else if(currentHour == 2)
