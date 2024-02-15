@@ -13,6 +13,9 @@ public class VikingAI : MonoBehaviour
 
     public AudioSource music;
 
+    public AudioSource walk;
+    public AudioSource voiceline;
+
     public GameObject jumpscareObject;
     public GameObject jumpscareviking;
     public GameObject stage1;
@@ -181,6 +184,8 @@ public class VikingAI : MonoBehaviour
                 yield return new WaitForSeconds(8f);
                 if (doorCam.activeSelf && !backToOfficeButton.IsActive())
                 {
+                    voiceline.Play();
+                    walk.Play();
                     currentLocation = "stage1";
                     stage1.gameObject.SetActive(true);
                     stage5.gameObject.SetActive(false);
@@ -192,6 +197,7 @@ public class VikingAI : MonoBehaviour
                 }
                 else
                 {
+                    jumpscareSound.Play();
                     music.Stop();
                     shitdatindewegzit.SetActive(false);
                     camerahandler.GetComponent<Cameras>().SwitchToCamDown(true);
@@ -200,7 +206,7 @@ public class VikingAI : MonoBehaviour
                     jumpscareviking.gameObject.SetActive(true);
                     jumpscareviking.gameObject.GetComponent<animplayer>().Func_PlayUIAnim();
 
-                    yield return new WaitForSeconds(7f);
+                    yield return new WaitForSeconds(7.3f);
                     // Load the next scene
                     SceneManager.LoadScene("GameOver");
                 }

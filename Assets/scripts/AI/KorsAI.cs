@@ -19,8 +19,8 @@ public class KorsAI : MonoBehaviour
     private Coroutine displayCoroutine;
 
     // Define different ranges for display and jumpscare times based on AI levels
-    private float[] minDisplayTimes = { 180f, 45f, 20f, 15f, 10f, 5f }; // Min display time for each level
-    private float[] maxDisplayTimes = { 180f, 60f, 40f, 30f, 20f, 10f }; // Max display time for each level
+    private float[] minDisplayTimes = { 180f, 45f, 20f, 15f, 10f, 70f }; // Min display time for each level
+    private float[] maxDisplayTimes = { 180f, 60f, 40f, 30f, 20f, 70 }; // Max display time for each level
     private float[] timeBeforeJumpScares = { 10f, 10f, 10f, 10f, 10f, 10f }; // Time before jumpscare for each level
 
     // Current AI level (for example, set it externally based on the game progress)
