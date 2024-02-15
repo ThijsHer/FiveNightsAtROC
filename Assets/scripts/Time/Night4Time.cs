@@ -93,7 +93,7 @@ public class Night4Time : MonoBehaviour
             rickAI.ailevel = 4;
             korsAI.currentAILevel = 2;
             PaulAI.ailevel = 5;
-            PeterAI.ailevel = 2;
+            PeterAI.ailevel = 3;
             VikingAI.aiLevel = 8;
 
 
@@ -103,8 +103,8 @@ public class Night4Time : MonoBehaviour
             rickAI.ailevel = 4;
             korsAI.currentAILevel = 2;
             PaulAI.ailevel = 5;
-            PeterAI.ailevel = 2;
-            VikingAI.aiLevel = 6;
+            PeterAI.ailevel = 3;
+            VikingAI.aiLevel = 9;
 
 
         }
@@ -113,8 +113,8 @@ public class Night4Time : MonoBehaviour
             rickAI.ailevel = 6;
             korsAI.currentAILevel = 2;
             PaulAI.ailevel = 5;
-            PeterAI.ailevel = 2;
-            VikingAI.aiLevel = 6;
+            PeterAI.ailevel = 3;
+            VikingAI.aiLevel = 9;
 
         }
     }
