@@ -63,19 +63,19 @@ public class Night4Time : MonoBehaviour
 
         if (currentHour == 0)
         {
-            rickAI.ailevel = 1;
+            rickAI.ailevel = 0;
             korsAI.currentAILevel = 6;
-            PaulAI.ailevel = 1;
+            PaulAI.ailevel = 0;
             PeterAI.ailevel = 0;
             VikingAI.aiLevel = 0;
         }
         else if (currentHour == 1)
         {
-            rickAI.ailevel = 3;
+            rickAI.ailevel = 4;
             korsAI.currentAILevel = 2;
             PaulAI.ailevel = 2;
             PeterAI.ailevel= 2;
-            VikingAI.aiLevel = 3;
+            VikingAI.aiLevel = 5;
 
         }
         else if(currentHour == 2)
@@ -84,37 +84,37 @@ public class Night4Time : MonoBehaviour
             korsAI.currentAILevel = 2;
             PaulAI.ailevel = 5;
             PeterAI.ailevel = 3;
-            VikingAI.aiLevel = 8;
+            VikingAI.aiLevel = 9;
 
 
         }
         else if (currentHour == 3)
         {
-            rickAI.ailevel = 5;
-            korsAI.currentAILevel = 2;
+            rickAI.ailevel = 6;
+            korsAI.currentAILevel = 3;
             PaulAI.ailevel = 5;
             PeterAI.ailevel = 4;
-            VikingAI.aiLevel = 9;
+            VikingAI.aiLevel = 11;
 
 
         }
         else if (currentHour == 4)
         {
-            rickAI.ailevel = 5;
-            korsAI.currentAILevel = 2;
+            rickAI.ailevel = 6;
+            korsAI.currentAILevel = 3;
             PaulAI.ailevel = 5;
-            PeterAI.ailevel = 3;
-            VikingAI.aiLevel = 10;
+            PeterAI.ailevel = 4;
+            VikingAI.aiLevel = 12;
 
 
         }
         else if (currentHour == 5)
         {
-            rickAI.ailevel = 6;
-            korsAI.currentAILevel = 2;
+            rickAI.ailevel = 7;
+            korsAI.currentAILevel = 3;
             PaulAI.ailevel = 5;
-            PeterAI.ailevel = 3;
-            VikingAI.aiLevel = 10;
+            PeterAI.ailevel = 4;
+            VikingAI.aiLevel = 12;
 
         }
     }
