@@ -1799,7 +1799,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 13185bf250563fa47bd8e77f419f7d9f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  gameDurationInSeconds: 288
+  gameDurationInSeconds: 302
   timeScale: 1
   textObject: {fileID: 1890155615}
   rickAI: {fileID: 70329117}
@@ -2779,7 +2779,7 @@ AudioSource:
   m_Enabled: 1
   serializedVersion: 4
   OutputAudioMixerGroup: {fileID: 0}
-  m_audioClip: {fileID: 8300000, guid: 42904c584911eb245a8a0e1d8f7d88be, type: 3}
+  m_audioClip: {fileID: 8300000, guid: 5f0459fde9f65e342b9a4439684a8abe, type: 3}
   m_PlayOnAwake: 0
   m_Volume: 1
   m_Pitch: 1
@@ -7199,7 +7199,7 @@ AudioSource:
   m_Enabled: 1
   serializedVersion: 4
   OutputAudioMixerGroup: {fileID: 0}
-  m_audioClip: {fileID: 8300000, guid: 6112f4aba5112234294a03bfd70cdb77, type: 3}
+  m_audioClip: {fileID: 8300000, guid: 9d77b4178c8c0cd49a8e162044fc03fb, type: 3}
   m_PlayOnAwake: 1
   m_Volume: 0.15
   m_Pitch: 1
