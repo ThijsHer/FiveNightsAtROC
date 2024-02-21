@@ -21,10 +21,10 @@ Game made by 4 developers in their freetime
 
 Contributors names and contact info
 
-ex. KaiFr2  (Developer)
-ex. Smeikol (Developer)
-ex. Rick (Developer)
-ex. ThijsHerder (Idea) (Developer)
+<p>ex. KaiFr2  (Developer)</p>
+<p>ex. Smeikol (Developer)</p>
+<p>ex. Rick (Developer)</p>
+<p>ex. ThijsHerder (Idea) (Developer)</p>
 
 ## License
 
